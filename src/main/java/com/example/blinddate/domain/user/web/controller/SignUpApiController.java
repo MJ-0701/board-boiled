@@ -24,9 +24,7 @@ public class SignUpApiController {
             @RequestBody @Valid UserSignUpReqDto reqDto
     ){
         User user = userService.saveUser(reqDto.toEntity());
-        userService.addAuthority(user.getId(), "ROLE_USER"); // ROLE_USER 이란식으로 ROLE_을 붙여줘야 권한설정이 됨. -> USER -> forbidden
-//        userService.addAuthority(user.getId(), "USER");
-
+        userService.addAuthority(user.getId(), "ROLE_USER"); // ROLE_USER 이란식으로 ROLE_을 붙여줘야 권한설정이 됨. -> USER -> forbidden -> 관련내용 https://minholee93.tistory.com/entry/Spring-Security-Authorities-Role
         return ResponseEntity.ok(user);
     }
 }

@@ -19,6 +19,7 @@ spring:
         format_sql: true
     generate-ddl: true
     defer-datasource-initialization: true
+    database: mysql
 
 
   # DB
@@ -40,6 +41,11 @@ spring:
   # Session
   session:
     store-type: jdbc
+
+  config:
+    import:
+      - classpath:/real-application.yml
+
 
 logging:
   file:
