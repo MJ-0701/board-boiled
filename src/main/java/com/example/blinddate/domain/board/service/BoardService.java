@@ -6,14 +6,10 @@ import com.example.blinddate.domain.board.web.dto.req.BoardSaveReqDto;
 import com.example.blinddate.domain.board.web.dto.req.BoardUpdateReq;
 import com.example.blinddate.domain.board.web.dto.res.BoardCommentResDto;
 import com.example.blinddate.domain.board.web.dto.res.BoardResDto;
-import com.example.blinddate.domain.commnet.domain.repository.CommentRepository;
-import com.example.blinddate.domain.commnet.domain.repository.ReCommentRepository;
 import com.example.blinddate.domain.commnet.service.CommentService;
-import com.example.blinddate.domain.commnet.web.dto.res.CommentList;
-import com.example.blinddate.domain.commnet.web.dto.res.ReCommentList;
 import com.example.blinddate.domain.file.domain.Files;
 import com.example.blinddate.domain.file.domain.repository.FilesRepository;
-import com.example.blinddate.domain.file.service.FileService;
+import com.example.blinddate.domain.file.service.FileHandler;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,7 +23,7 @@ import java.util.stream.Collectors;
 public class BoardService {
 
     private final BoardRepository boardRepository;
-    private final FileService fileService;
+    private final FileHandler fileHandler;
     private final FilesRepository filesRepository;
 
     private final CommentService commentService;
@@ -55,7 +51,7 @@ public class BoardService {
                 .userId(reqDto.getUserId())
                 .password(reqDto.getPassword())
                 .build();
-        List<Files> filesList = fileService.fileInfo(files);
+        List<Files> filesList = fileHandler.fileInfo(files);
         // 파일이 존재할 때에만 처리
         if(!filesList.isEmpty()){
             for(Files file : filesList){
@@ -82,8 +78,9 @@ public class BoardService {
     public BoardCommentResDto boardResponse(Long boardId, Long commentId){
         Board board = boardRepository.findById(boardId).orElseThrow();
 //        List<ReCommentList> reCommentLists = commentService.reCommentLists(commentId);
-        CommentList commentList = commentService.commentList(commentId);
-        return new BoardCommentResDto(board, commentList);
+//        CommentList commentList = commentService.commentList(commentId);
+//        return new BoardCommentResDto(board, commentList);
+        return new BoardCommentResDto(board);
     }
 
 

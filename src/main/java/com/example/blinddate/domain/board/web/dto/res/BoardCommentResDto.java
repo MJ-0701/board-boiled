@@ -23,18 +23,19 @@ public class BoardCommentResDto {
 
     @JsonProperty("file_path")
     private List<String> filePath;
-    private final CommentList comment;
+
+    private final List<CommentList> comment;
 
 
 
 
 
-    public BoardCommentResDto(Board entity, CommentList comments){
+    public BoardCommentResDto(Board entity){
         this.title = entity.getTitle();
         this.contents = entity.getContents();
         this.userId = entity.getUserId();
         this.filePath = entity.getFiles().stream().map(Files::getFilePath).collect(Collectors.toList());
-        this.comment = comments;
+        this.comment = entity.getCommentList().stream().map(CommentList::new).collect(Collectors.toList());
 
     }
 }
