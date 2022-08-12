@@ -14,6 +14,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -79,18 +80,19 @@ public class BoardApiController {
     @GetMapping("/search/paging")
     public ResponseEntity<List<BoardListDto>> searchPaging(
             @PageableDefault(size = 5, sort = "id", direction = Sort.Direction.DESC)Pageable pageable,
-            @RequestParam String keyword){
+            @RequestParam String keyword){ // 페이징 dto 만들어서 처리할것.
         Page<BoardListDto> paging = boardService.searchPaging(keyword, pageable); // 요소 6개 기준
-        System.out.println("페이지 수 :" + paging.getTotalPages()); // 2
-        System.out.println("previous :" + pageable.previousOrFirst().getPageNumber()); // 0
-        System.out.println("next :" + pageable.next().getPageNumber()); // 1
-        System.out.println("hasNext :" + paging.hasNext()); // true
-        System.out.println("hasPrev :" + paging.hasPrevious()); // false
+//        System.out.println("페이지 수 :" + paging.getTotalPages()); // 2
+//        System.out.println("previous :" + pageable.previousOrFirst().getPageNumber());
+//        System.out.println("next :" + pageable.next().getPageNumber());
+//        System.out.println("hasPrev :" + paging.hasPrevious());
+//        System.out.println("hasNext :" + paging.hasNext());
+
 
         return ResponseEntity.ok(paging.getContent());
     }
 
-    // U
+        // U
     @PatchMapping("/update/{id}")
     public ResponseEntity<Long> boardUpdate(@PathVariable Long id, @RequestBody BoardUpdateReq req){
         return ResponseEntity.ok(boardService.boardUpdate(id, req));
@@ -112,4 +114,5 @@ public class BoardApiController {
 
         boardService.boardDeleteWithPwd(id, reqDto.getPassword());
     }
+
 }
