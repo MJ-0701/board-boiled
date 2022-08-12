@@ -80,7 +80,14 @@ public class BoardApiController {
     public ResponseEntity<List<BoardListDto>> searchPaging(
             @PageableDefault(size = 5, sort = "id", direction = Sort.Direction.DESC)Pageable pageable,
             @RequestParam String keyword){
-        return ResponseEntity.ok(boardService.searchPaging(keyword, pageable).getContent());
+        Page<BoardListDto> paging = boardService.searchPaging(keyword, pageable); // 요소 6개 기준
+        System.out.println("페이지 수 :" + paging.getTotalPages()); // 2
+        System.out.println("previous :" + pageable.previousOrFirst().getPageNumber()); // 0
+        System.out.println("next :" + pageable.next().getPageNumber()); // 1
+        System.out.println("hasNext :" + paging.hasNext()); // true
+        System.out.println("hasPrev :" + paging.hasPrevious()); // false
+
+        return ResponseEntity.ok(paging.getContent());
     }
 
     // U
