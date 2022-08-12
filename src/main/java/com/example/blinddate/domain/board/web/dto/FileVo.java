@@ -1,5 +1,6 @@
 package com.example.blinddate.domain.board.web.dto;
 
+import com.example.blinddate.domain.user.domain.Gender;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -19,4 +20,6 @@ public class FileVo {
     private String password;
 
     private List<MultipartFile> files;
+
+    private Gender gender;
 }

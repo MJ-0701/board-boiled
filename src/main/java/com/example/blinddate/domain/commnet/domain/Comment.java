@@ -2,6 +2,7 @@ package com.example.blinddate.domain.commnet.domain;
 
 import com.example.blinddate.domain.board.domain.Board;
 import com.example.blinddate.global.entity.BaseTimeEntity;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -45,6 +46,7 @@ public class Comment extends BaseTimeEntity {
     private List<Comment> childList = new ArrayList<>();
 
     @OneToMany(mappedBy = "comment", orphanRemoval = true)
+    @JsonProperty("re_comment_list")
     private List<ReComment> reCommentList = new ArrayList<>();
 
 

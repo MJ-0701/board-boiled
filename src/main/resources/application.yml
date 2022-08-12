@@ -19,6 +19,7 @@ spring:
         format_sql: true
     generate-ddl: true
     defer-datasource-initialization: true
+    database: mysql
 
 
   # DB
@@ -34,12 +35,17 @@ spring:
 
   # Swagger ??
   mvc:
-    pathmatch:
+    path match:
       matching-strategy: ant_path_matcher
 
   # Session
   session:
     store-type: jdbc
+
+  config:
+    import:
+      - classpath:/real-application.yml
+
 
 logging:
   file:

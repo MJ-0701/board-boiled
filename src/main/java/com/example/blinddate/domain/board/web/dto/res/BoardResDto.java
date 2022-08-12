@@ -27,6 +27,8 @@ public class BoardResDto {
 
     private final List<CommentList> comment;
 
+    private final int viewCount;
+
 
 
 
@@ -36,6 +38,7 @@ public class BoardResDto {
         this.userId = entity.getUserId();
         this.filePath = entity.getFiles().stream().map(Files::getFilePath).collect(Collectors.toList());
         this.comment = entity.getCommentList().stream().map(CommentList::new).collect(Collectors.toList());
+        this.viewCount = entity.getViewCount();
 
     }
 }
