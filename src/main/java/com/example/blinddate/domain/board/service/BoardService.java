@@ -4,13 +4,16 @@ import com.example.blinddate.domain.board.domain.Board;
 import com.example.blinddate.domain.board.domain.repository.BoardRepository;
 import com.example.blinddate.domain.board.web.dto.req.BoardSaveReqDto;
 import com.example.blinddate.domain.board.web.dto.req.BoardUpdateReq;
-import com.example.blinddate.domain.board.web.dto.res.BoardCommentResDto;
+import com.example.blinddate.domain.board.web.dto.res.BoardListDto;
 import com.example.blinddate.domain.board.web.dto.res.BoardResDto;
 import com.example.blinddate.domain.commnet.service.CommentService;
 import com.example.blinddate.domain.file.domain.Files;
 import com.example.blinddate.domain.file.domain.repository.FilesRepository;
 import com.example.blinddate.domain.file.service.FileHandler;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -37,6 +40,8 @@ public class BoardService {
                 .contents(reqDto.getContents())
                 .userId(reqDto.getUserId())
                 .password(reqDto.getPassword())
+                .gender(reqDto.getGender())
+                .likeCount(reqDto.getLikeCount())
                 .build();
         boardRepository.save(board);
         return board.getId();
@@ -50,6 +55,7 @@ public class BoardService {
                 .contents(reqDto.getContents())
                 .userId(reqDto.getUserId())
                 .password(reqDto.getPassword())
+                .gender(reqDto.getGender())
                 .build();
         List<Files> filesList = fileHandler.fileInfo(files);
         // 파일이 존재할 때에만 처리
@@ -70,18 +76,39 @@ public class BoardService {
     }
 
     @Transactional(readOnly = true)
-    public List<BoardResDto> findAll(){
-        return boardRepository.findAll().stream().map(BoardResDto::new).collect(Collectors.toList());
+    public List<BoardListDto> findAll(){
+        return boardRepository.findAll().stream().map(BoardListDto::new).collect(Collectors.toList());
     }
 
     @Transactional(readOnly = true)
-    public BoardCommentResDto boardResponse(Long boardId, Long commentId){
+    public BoardListDto boardResponse(Long boardId, Long commentId){
         Board board = boardRepository.findById(boardId).orElseThrow();
-//        List<ReCommentList> reCommentLists = commentService.reCommentLists(commentId);
-//        CommentList commentList = commentService.commentList(commentId);
-//        return new BoardCommentResDto(board, commentList);
-        return new BoardCommentResDto(board);
+        return new BoardListDto(board);
     }
+
+    @Transactional(readOnly = true)
+    public List<BoardListDto> searchBoard(String keyword){
+        List<Board> searchList = boardRepository.findByTitleContaining(keyword);
+        return searchList.stream().map(BoardListDto::new).collect(Collectors.toList());
+    }
+
+    @Transactional(readOnly = true)
+    public List<BoardListDto> searchLikeBoard(String keyword){
+        List<Board> searchList = boardRepository.findByTitleLike(keyword);
+        return searchList.stream().map(BoardListDto::new).collect(Collectors.toList());
+
+    }
+
+    @Transactional(readOnly = true)
+    public Page<BoardListDto> boardPaging(Pageable pageable){
+         return boardRepository.findAll(pageable).map(BoardListDto::new);
+    }
+
+    @Transactional(readOnly = true)
+    public Page<BoardListDto> searchPaging(String keyword, Pageable pageable){
+        return boardRepository.findByTitleLike(keyword, pageable).map(BoardListDto::new);
+    }
+
 
 
     // U
@@ -99,6 +126,16 @@ public class BoardService {
         board.update(req.getTitle(), req.getContents());
         boardRepository.save(board);
         return board.getId();
+    }
+
+    @Transactional
+    public int updateViewCount(Long id){
+        return boardRepository.updateViewCount(id);
+    }
+
+    @Transactional
+    public int updateLikeCount(Long id){
+        return boardRepository.updateLikeCount(id);
     }
 
     // D

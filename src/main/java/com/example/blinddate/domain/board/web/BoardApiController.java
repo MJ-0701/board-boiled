@@ -1,13 +1,18 @@
 package com.example.blinddate.domain.board.web;
 
+import com.example.blinddate.domain.board.domain.Board;
 import com.example.blinddate.domain.board.service.BoardService;
 import com.example.blinddate.domain.board.web.dto.req.BoardDeleteReqDto;
 import com.example.blinddate.domain.board.web.dto.req.BoardSaveReqDto;
 import com.example.blinddate.domain.board.web.dto.req.BoardUpdateReq;
-import com.example.blinddate.domain.board.web.dto.res.BoardCommentResDto;
+import com.example.blinddate.domain.board.web.dto.res.BoardListDto;
 import com.example.blinddate.domain.board.web.dto.res.BoardResDto;
 import com.example.blinddate.domain.board.web.dto.FileVo;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,6 +39,7 @@ public class BoardApiController {
                 .title(fileVo.getTitle())
                 .userId(fileVo.getUserId())
                 .password(fileVo.getPassword())
+                .gender(fileVo.getGender())
                 .build();
         return boardService.create(reqDto, fileVo.getFiles());
     }
@@ -41,17 +47,40 @@ public class BoardApiController {
     // R
     @GetMapping("/detail/{id}")
     public ResponseEntity<BoardResDto> findById(@PathVariable Long id){
+        boardService.updateViewCount(id);
         return ResponseEntity.ok(boardService.findById(id));
     }
 
     @GetMapping("/list")
-    public ResponseEntity<List<BoardResDto>> findAll(){
+    public ResponseEntity<List<BoardListDto>> findAll(){
         return ResponseEntity.ok(boardService.findAll());
     }
 
     @GetMapping("/comment/{boardId}")
-    public ResponseEntity<BoardCommentResDto> commentResponse(@PathVariable Long boardId, @RequestParam Long commentId){
+    public ResponseEntity<BoardListDto> commentResponse(@PathVariable Long boardId, @RequestParam Long commentId){
         return ResponseEntity.ok(boardService.boardResponse(boardId, commentId));
+    }
+
+    @GetMapping("/search/contain")
+    public ResponseEntity<List<BoardListDto>> searchList(@RequestParam String keyword){
+        return ResponseEntity.ok(boardService.searchBoard(keyword));
+    }
+
+    @GetMapping("/search/like")
+    public ResponseEntity<List<BoardListDto>> searchLikeList(@RequestParam String keyword){
+        return ResponseEntity.ok(boardService.searchLikeBoard(keyword));
+    }
+
+    @GetMapping("/paging")
+    public ResponseEntity<List<BoardListDto>> boardPaging(@PageableDefault(size = 5, sort = "id", direction = Sort.Direction.DESC)Pageable pageable){
+        return ResponseEntity.ok(boardService.boardPaging(pageable).getContent());
+    }
+
+    @GetMapping("/search/paging")
+    public ResponseEntity<List<BoardListDto>> searchPaging(
+            @PageableDefault(size = 5, sort = "id", direction = Sort.Direction.DESC)Pageable pageable,
+            @RequestParam String keyword){
+        return ResponseEntity.ok(boardService.searchPaging(keyword, pageable).getContent());
     }
 
     // U
