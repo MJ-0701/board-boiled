@@ -40,6 +40,8 @@ public class Board extends BaseTimeEntity {
 
     private int likeCount = 0;
 
+    private boolean declaration = false;
+
     @OneToMany(mappedBy = "board", cascade = {CascadeType.REMOVE, CascadeType.PERSIST}, orphanRemoval = true)
     private List<Comment> commentList = new ArrayList<>();
 
@@ -47,7 +49,7 @@ public class Board extends BaseTimeEntity {
     private List<Files> files = new ArrayList<>();
 
     @Builder
-    public Board(String title, String contents, String userId, String password, Gender gender, int likeCount, Tag tag){ // 클래스에 @Builder 를 먹여서 처리하면 현재 서비스 로직에서 file을 먼저 저장하므로 board id 값이 null -> nullpoint
+    public Board(String title, String contents, String userId, String password, Gender gender, int likeCount, Tag tag, boolean declaration){ // 클래스에 @Builder 를 먹여서 처리하면 현재 서비스 로직에서 file을 먼저 저장하므로 board id 값이 null -> nullpoint
         this.title = title;
         this.contents = contents;
         this.userId = userId;
@@ -55,6 +57,7 @@ public class Board extends BaseTimeEntity {
         this.gender = gender;
         this.likeCount = likeCount;
         this.tag = tag;
+        this.declaration = declaration;
     }
 
     public void addComment(Comment comment){
@@ -83,6 +86,10 @@ public class Board extends BaseTimeEntity {
 
     public void viewCountUpdate(int viewCount){
         this.viewCount = viewCount;
+    }
+
+    public void declarationUpdate(boolean declaration){
+        this.declaration = declaration;
     }
 
 

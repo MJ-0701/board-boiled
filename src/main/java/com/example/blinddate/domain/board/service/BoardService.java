@@ -156,6 +156,12 @@ public class BoardService {
         return boardRepository.updateMinusLikeCount(id);
     }
 
+    @Transactional
+    public void updateDeclaration(Long id){
+        Board board = boardRepository.findById(id).orElseThrow();
+        board.declarationUpdate(true);
+    }
+
     // D
     @Transactional
     public void boardDelete(Long id){

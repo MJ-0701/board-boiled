@@ -1,5 +1,6 @@
 package com.example.blinddate.domain.commnet.service;
 
+import com.example.blinddate.domain.board.domain.Board;
 import com.example.blinddate.domain.board.domain.repository.BoardRepository;
 import com.example.blinddate.domain.commnet.domain.Comment;
 import com.example.blinddate.domain.commnet.domain.ReComment;
@@ -11,6 +12,7 @@ import com.example.blinddate.domain.commnet.web.dto.req.ReCommentSaveReqDto;
 import com.example.blinddate.domain.commnet.web.dto.req.ReCommentUpdateDto;
 import com.example.blinddate.domain.commnet.web.dto.res.CommentList;
 import com.example.blinddate.domain.commnet.web.dto.res.ReCommentList;
+import com.example.blinddate.domain.notice.domain.repository.NoticeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,17 +26,19 @@ public class CommentService {
 
     private final CommentRepository commentRepository;
     private final BoardRepository boardRepository;
-
     private final ReCommentRepository reCommentRepository;
 
+    private final NoticeRepository noticeRepository;
+
     @Transactional
-    public Long commentSave(Long boardId, CommentSaveReqDto reqDto){
+    public Long commentSave(Long boardId, CommentSaveReqDto reqDto){ // todo :: 일반 게시글과 공지사항 댓글 구분 해야됨.
+        Board board = boardRepository.findById(boardId).orElseThrow();
         Comment comment = Comment
                 .builder()
                 .contents(reqDto.getContents())
                 .nickName(reqDto.getNickName())
                 .password(reqDto.getPassword())
-                .board(boardRepository.findById(boardId).orElseThrow())
+                .board(board)
                 .build();
         commentRepository.save(comment);
         return comment.getId();

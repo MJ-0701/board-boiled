@@ -27,4 +27,5 @@ public class BoardSaveReqDto {
     private int likeCount;
 
     private Tag tag;
+
 }
