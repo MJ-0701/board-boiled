@@ -34,6 +34,8 @@ public class Board extends BaseTimeEntity {
 
     private Gender gender;
 
+    private Tag tag;
+
     private int viewCount = 0;
 
     private int likeCount = 0;
@@ -45,13 +47,14 @@ public class Board extends BaseTimeEntity {
     private List<Files> files = new ArrayList<>();
 
     @Builder
-    public Board(String title, String contents, String userId, String password, Gender gender, int likeCount){ // 클래스에 @Builder 를 먹여서 처리하면 현재 서비스 로직에서 file을 먼저 저장하므로 board id 값이 null -> nullpoint
+    public Board(String title, String contents, String userId, String password, Gender gender, int likeCount, Tag tag){ // 클래스에 @Builder 를 먹여서 처리하면 현재 서비스 로직에서 file을 먼저 저장하므로 board id 값이 null -> nullpoint
         this.title = title;
         this.contents = contents;
         this.userId = userId;
         this.password = password;
         this.gender = gender;
         this.likeCount = likeCount;
+        this.tag = tag;
     }
 
     public void addComment(Comment comment){

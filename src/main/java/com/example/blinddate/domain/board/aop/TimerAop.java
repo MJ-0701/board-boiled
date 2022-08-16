@@ -40,14 +40,12 @@ public class TimerAop {
         stopWatch.stop();
 
         Double totalTime = stopWatch.getTotalTimeSeconds();
-
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         String methodName = signature.getMethod().getName();
 
         log.info("실행 메서드 : {}, 실행시간 = {}", methodName, totalTime);
-        Object[] args = Arrays.stream(joinPoint.getArgs()).toArray();
+        return result;
 
-        return joinPoint.proceed(args);
     }
 
 }

@@ -1,5 +1,6 @@
 package com.example.blinddate.domain.board.web.dto;
 
+import com.example.blinddate.domain.board.domain.Tag;
 import com.example.blinddate.domain.user.domain.Gender;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
@@ -22,4 +23,6 @@ public class FileVo {
     private List<MultipartFile> files;
 
     private Gender gender;
+
+    private Tag tag;
 }

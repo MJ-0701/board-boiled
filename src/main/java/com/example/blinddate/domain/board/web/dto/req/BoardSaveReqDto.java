@@ -1,5 +1,6 @@
 package com.example.blinddate.domain.board.web.dto.req;
 
+import com.example.blinddate.domain.board.domain.Tag;
 import com.example.blinddate.domain.user.domain.Gender;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -24,4 +25,6 @@ public class BoardSaveReqDto {
 
     @JsonProperty("like_count")
     private int likeCount;
+
+    private Tag tag;
 }

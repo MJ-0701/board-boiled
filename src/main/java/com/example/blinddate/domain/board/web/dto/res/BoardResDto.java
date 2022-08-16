@@ -1,6 +1,7 @@
 package com.example.blinddate.domain.board.web.dto.res;
 
 import com.example.blinddate.domain.board.domain.Board;
+import com.example.blinddate.domain.board.domain.Tag;
 import com.example.blinddate.domain.commnet.domain.Comment;
 import com.example.blinddate.domain.commnet.domain.ReComment;
 import com.example.blinddate.domain.commnet.web.dto.res.CommentList;
@@ -29,6 +30,8 @@ public class BoardResDto {
 
     private final int viewCount;
 
+    private final Tag tag;
+
 
 
 
@@ -39,6 +42,7 @@ public class BoardResDto {
         this.filePath = entity.getFiles().stream().map(Files::getFilePath).collect(Collectors.toList());
         this.comment = entity.getCommentList().stream().map(CommentList::new).collect(Collectors.toList());
         this.viewCount = entity.getViewCount();
+        this.tag = entity.getTag();
 
     }
 }
