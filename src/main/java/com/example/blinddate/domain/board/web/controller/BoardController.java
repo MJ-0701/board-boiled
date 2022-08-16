@@ -1,4 +1,4 @@
-package com.example.blinddate.domain.board.web;
+package com.example.blinddate.domain.board.web.controller;
 
 import com.example.blinddate.domain.board.service.BoardService;
 import lombok.RequiredArgsConstructor;
