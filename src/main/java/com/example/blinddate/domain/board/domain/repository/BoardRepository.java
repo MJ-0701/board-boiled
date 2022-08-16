@@ -1,7 +1,7 @@
 package com.example.blinddate.domain.board.domain.repository;
 
 import com.example.blinddate.domain.board.domain.Board;
-import com.example.blinddate.domain.board.web.dto.res.BoardListDto;
+import com.example.blinddate.domain.board.domain.Tag;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -18,11 +18,15 @@ public interface BoardRepository extends JpaRepository<Board, Long> {
 
     @Modifying
     @Query("UPDATE Board B SET B.viewCount = B.viewCount + 1 WHERE B.id = :id")
-    int updateViewCount(Long id);
+    void updateViewCount(Long id);
 
     @Modifying
     @Query("UPDATE Board B SET B.likeCount = B.likeCount + 1 WHERE B.id = :id")
-    int updateLikeCount(Long id);
+    int updatePlusLikeCount(Long id);
+
+    @Modifying
+    @Query("UPDATE Board B SET B.likeCount = B.likeCount - 1 WHERE B.id = :id")
+    int updateMinusLikeCount(Long id);
 
     List<Board> findByTitleContaining(String keyword);
 
@@ -32,6 +36,13 @@ public interface BoardRepository extends JpaRepository<Board, Long> {
 
     @Query("SELECT b FROM Board b WHERE b.title LIKE %:keyword% ORDER BY b.id DESC ")
     Page<Board> findByTitleLike(String keyword, Pageable pageable);
+
+    List<Board> findByTag(Tag tag);
+
+    @Query("SELECT b FROM Board b WHERE b.tag IS NULL ")
+    List<Board> findByTagIsNull(Tag tag);
+
+
 
 
 

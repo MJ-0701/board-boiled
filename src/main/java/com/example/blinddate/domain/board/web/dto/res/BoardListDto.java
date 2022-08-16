@@ -1,6 +1,7 @@
 package com.example.blinddate.domain.board.web.dto.res;
 
 import com.example.blinddate.domain.board.domain.Board;
+import com.example.blinddate.domain.board.domain.Tag;
 import com.example.blinddate.domain.commnet.web.dto.res.CommentList;
 import com.example.blinddate.domain.file.domain.Files;
 import com.example.blinddate.domain.user.domain.Gender;
@@ -25,6 +26,8 @@ public class BoardListDto {
 
     private final int viewCount;
 
+    private final Tag tag;
+
 
 
 
@@ -38,6 +41,7 @@ public class BoardListDto {
         this.userId = entity.getUserId();
         this.gender = entity.getGender();
         this.viewCount = entity.getViewCount();
+        this.tag = entity.getTag();
 
     }
 }

@@ -1,6 +1,7 @@
 package com.example.blinddate.domain.board.web.controller;
 
 import com.example.blinddate.domain.board.domain.Board;
+import com.example.blinddate.domain.board.domain.Tag;
 import com.example.blinddate.domain.board.service.BoardService;
 import com.example.blinddate.domain.board.web.dto.req.BoardDeleteReqDto;
 import com.example.blinddate.domain.board.web.dto.req.BoardSaveReqDto;
@@ -42,6 +43,7 @@ public class BoardApiController {
                 .userId(fileVo.getUserId())
                 .password(fileVo.getPassword())
                 .gender(fileVo.getGender())
+                .tag(fileVo.getTag())
                 .build();
         return boardService.create(reqDto, fileVo.getFiles());
     }
@@ -57,7 +59,15 @@ public class BoardApiController {
     @GetMapping("/list")
     @Timer
     public ResponseEntity<List<BoardListDto>> findAll(){
+
         return ResponseEntity.ok(boardService.findAll());
+    }
+
+    @GetMapping("/tag-list/{tag}")
+    @Timer
+    public ResponseEntity<List<BoardListDto>> tagList(@PathVariable(required = false) Tag tag){
+
+        return ResponseEntity.ok().body(boardService.tagList(tag));
     }
 
     @GetMapping("/comment/{boardId}")
@@ -90,6 +100,7 @@ public class BoardApiController {
 //        System.out.println("next :" + pageable.next().getPageNumber());
 //        System.out.println("hasPrev :" + paging.hasPrevious());
 //        System.out.println("hasNext :" + paging.hasNext());
+//        System.out.println("현재 페이지 :" + pageable.getPageNumber());
 
 
         return ResponseEntity.ok(paging.getContent());

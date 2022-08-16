@@ -1,6 +1,7 @@
 package com.example.blinddate.domain.board.service;
 
 import com.example.blinddate.domain.board.domain.Board;
+import com.example.blinddate.domain.board.domain.Tag;
 import com.example.blinddate.domain.board.domain.repository.BoardRepository;
 import com.example.blinddate.domain.board.web.dto.req.BoardSaveReqDto;
 import com.example.blinddate.domain.board.web.dto.req.BoardUpdateReq;
@@ -12,7 +13,6 @@ import com.example.blinddate.domain.file.domain.repository.FilesRepository;
 import com.example.blinddate.domain.file.service.FileHandler;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -42,6 +42,7 @@ public class BoardService {
                 .password(reqDto.getPassword())
                 .gender(reqDto.getGender())
                 .likeCount(reqDto.getLikeCount())
+                .tag(reqDto.getTag())
                 .build();
         boardRepository.save(board);
         return board.getId();
@@ -56,6 +57,7 @@ public class BoardService {
                 .userId(reqDto.getUserId())
                 .password(reqDto.getPassword())
                 .gender(reqDto.getGender())
+                .tag(reqDto.getTag())
                 .build();
         List<Files> filesList = fileHandler.fileInfo(files);
         // 파일이 존재할 때에만 처리
@@ -78,6 +80,17 @@ public class BoardService {
     @Transactional(readOnly = true)
     public List<BoardListDto> findAll(){
         return boardRepository.findAll().stream().map(BoardListDto::new).collect(Collectors.toList());
+    }
+
+    @Transactional(readOnly = true)
+    public List<BoardListDto> tagList(Tag tag){
+        if(tag == null){
+            return boardRepository.findByTagIsNull(null).stream().map(BoardListDto::new).collect(Collectors.toList());
+        }else {
+            return boardRepository.findByTag(tag).stream().map(BoardListDto::new).collect(Collectors.toList());
+        }
+
+
     }
 
     @Transactional(readOnly = true)
@@ -129,13 +142,18 @@ public class BoardService {
     }
 
     @Transactional
-    public int updateViewCount(Long id){
-        return boardRepository.updateViewCount(id);
+    public void updateViewCount(Long id){
+        boardRepository.updateViewCount(id);
     }
 
     @Transactional
-    public int updateLikeCount(Long id){
-        return boardRepository.updateLikeCount(id);
+    public int updatePlusLikeCount(Long id){
+        return boardRepository.updatePlusLikeCount(id);
+    }
+
+    @Transactional
+    public int updateMinusLikeCount(Long id){
+        return boardRepository.updateMinusLikeCount(id);
     }
 
     // D
