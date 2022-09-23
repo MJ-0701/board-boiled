@@ -15,6 +15,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
@@ -25,7 +26,7 @@ import java.util.Arrays;
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 @RequiredArgsConstructor
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+public class SecurityConfig {
 
     private final JwtTokenProvider jwtTokenProvider;
 
@@ -36,14 +37,34 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
 
-    @Bean
-    @Override
-    public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean();
-    }
+//    @Bean
+//    @Override
+//    public AuthenticationManager authenticationManagerBean() throws Exception {
+//        return super.authenticationManagerBean();
+//    }
 
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http.cors()
+//                .configurationSource(corsConfigurationSource())
+//                .and()
+//                .csrf().disable()
+//                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+//                .authorizeRequests()
+//                .antMatchers("/swagger-ui.html/**").permitAll()
+//                .antMatchers("/api/v1/**").permitAll()
+////                .antMatchers("/post-file").hasRole(Role.USER.name())
+//                .antMatchers("/post-file").permitAll()
+////                .antMatchers("/api/v1/notice/**").hasRole(Role.ADMIN.name())
+//                .antMatchers("/api/v1/notice/**").permitAll()
+//                .and()
+//                .addFilterAt(new JwtAuthenticationFilter(jwtTokenProvider), UsernamePasswordAuthenticationFilter.class)
+//        ;
+//
+//    }
+
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.cors()
                 .configurationSource(corsConfigurationSource())
                 .and()
@@ -52,12 +73,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/swagger-ui.html/**").permitAll()
                 .antMatchers("/api/v1/**").permitAll()
-//                .antMatchers("/post-file").hasRole(Role.USER.name())
                 .antMatchers("/post-file").permitAll()
+//                .antMatchers("/post-file").hasRole(Role.USER.name())
+//                .antMatchers("/api/v1/notice/**").hasRole(Role.ADMIN.name())
                 .and()
                 .addFilterAt(new JwtAuthenticationFilter(jwtTokenProvider), UsernamePasswordAuthenticationFilter.class)
         ;
-
+        return http.build();
     }
 
 

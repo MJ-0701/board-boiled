@@ -32,6 +32,8 @@ public class BoardResDto {
 
     private final Tag tag;
 
+    private boolean declaration;
+
 
 
 
@@ -43,6 +45,7 @@ public class BoardResDto {
         this.comment = entity.getCommentList().stream().map(CommentList::new).collect(Collectors.toList());
         this.viewCount = entity.getViewCount();
         this.tag = entity.getTag();
+        this.declaration = entity.isDeclaration();
 
     }
 }

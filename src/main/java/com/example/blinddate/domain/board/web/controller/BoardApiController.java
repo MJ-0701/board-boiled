@@ -101,12 +101,10 @@ public class BoardApiController {
 //        System.out.println("hasPrev :" + paging.hasPrevious());
 //        System.out.println("hasNext :" + paging.hasNext());
 //        System.out.println("현재 페이지 :" + pageable.getPageNumber());
-
-
         return ResponseEntity.ok(paging.getContent());
     }
 
-        // U
+    // U
     @PatchMapping("/update/{id}")
     public ResponseEntity<Long> boardUpdate(@PathVariable Long id, @RequestBody BoardUpdateReq req){
         return ResponseEntity.ok(boardService.boardUpdate(id, req));
@@ -115,6 +113,11 @@ public class BoardApiController {
     @PatchMapping("update-id-pwd/{id}")
     public ResponseEntity<Long> boardUpdateWithIdAndPassword(@PathVariable Long id, @RequestBody BoardUpdateReq req){
         return ResponseEntity.ok(boardService.boardUpdateWithIdAndPassword(id, req));
+    }
+
+    @PatchMapping("/declaration/{id}")
+    public void updateDeclaration(@PathVariable Long id){
+        boardService.updateDeclaration(id);
     }
 
     // D

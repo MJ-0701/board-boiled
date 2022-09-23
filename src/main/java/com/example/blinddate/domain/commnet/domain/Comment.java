@@ -1,6 +1,7 @@
 package com.example.blinddate.domain.commnet.domain;
 
 import com.example.blinddate.domain.board.domain.Board;
+import com.example.blinddate.domain.notice.domain.Notice;
 import com.example.blinddate.global.entity.BaseTimeEntity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -32,6 +33,10 @@ public class Comment extends BaseTimeEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "board_id")
     private Board board;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "notice_id")
+    private Notice notice;
 
 
     private String contents;
