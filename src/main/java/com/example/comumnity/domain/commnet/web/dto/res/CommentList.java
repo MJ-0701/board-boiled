@@ -15,6 +15,7 @@ public class CommentList {
 
     private final String contents;
 
+    @JsonProperty("re_comment_list")
     private final List<ReCommentList> reCommentLists;
 
     public CommentList(Comment entity){

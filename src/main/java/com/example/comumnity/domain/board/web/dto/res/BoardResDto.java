@@ -1,8 +1,18 @@
 package com.example.comumnity.domain.board.web.dto.res;
 
+<<<<<<< HEAD:src/main/java/com/example/blinddate/domain/board/web/dto/res/BoardResDto.java
+import com.example.blinddate.domain.board.domain.Board;
+import com.example.blinddate.domain.board.domain.Tag;
+import com.example.blinddate.domain.commnet.domain.Comment;
+import com.example.blinddate.domain.commnet.domain.ReComment;
+import com.example.blinddate.domain.commnet.web.dto.res.CommentList;
+import com.example.blinddate.domain.commnet.web.dto.res.ReCommentList;
+import com.example.blinddate.domain.file.domain.Files;
+=======
 import com.example.comumnity.domain.board.domain.Board;
 import com.example.comumnity.domain.commnet.domain.Comment;
 import com.example.comumnity.domain.file.domain.Files;
+>>>>>>> master:src/main/java/com/example/comumnity/domain/board/web/dto/res/BoardResDto.java
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 
@@ -22,20 +32,26 @@ public class BoardResDto {
     @JsonProperty("file_path")
     private List<String> filePath;
 
-    @JsonProperty("comment_list")
-    private List<String> commentList;
+    private final List<CommentList> comment;
 
-    @JsonProperty("re_comment_list")
-    private List<String> reCommentList;
+    private final int viewCount;
 
-//    @JsonProperty("re_comment_list")
-//    private List<List<ReComment>> reCommentList;
+    private final Tag tag;
+
+    private boolean declaration;
+
+
+
 
     public BoardResDto(Board entity){
         this.title = entity.getTitle();
         this.contents = entity.getContents();
         this.userId = entity.getUserId();
         this.filePath = entity.getFiles().stream().map(Files::getFilePath).collect(Collectors.toList());
-        this.commentList = entity.getCommentList().stream().map(Comment::getContents).collect(Collectors.toList());
+        this.comment = entity.getCommentList().stream().map(CommentList::new).collect(Collectors.toList());
+        this.viewCount = entity.getViewCount();
+        this.tag = entity.getTag();
+        this.declaration = entity.isDeclaration();
+
     }
 }

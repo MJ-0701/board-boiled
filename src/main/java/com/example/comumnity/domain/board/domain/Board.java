@@ -1,8 +1,17 @@
 package com.example.comumnity.domain.board.domain;
 
+<<<<<<< HEAD:src/main/java/com/example/blinddate/domain/board/domain/Board.java
+import com.example.blinddate.domain.commnet.domain.Comment;
+import com.example.blinddate.domain.file.domain.Files;
+import com.example.blinddate.domain.user.domain.Gender;
+import com.example.blinddate.global.entity.BaseTimeEntity;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+=======
 import com.example.comumnity.domain.commnet.domain.Comment;
 import com.example.comumnity.domain.file.domain.Files;
 import com.example.comumnity.global.entity.BaseTimeEntity;
+>>>>>>> master:src/main/java/com/example/comumnity/domain/board/domain/Board.java
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,6 +38,16 @@ public class Board extends BaseTimeEntity {
 
     private String password;
 
+    private Gender gender;
+
+    private Tag tag;
+
+    private int viewCount = 0;
+
+    private int likeCount = 0;
+
+    private boolean declaration = false;
+
     @OneToMany(mappedBy = "board", cascade = {CascadeType.REMOVE, CascadeType.PERSIST}, orphanRemoval = true)
     private List<Comment> commentList = new ArrayList<>();
 
@@ -36,11 +55,15 @@ public class Board extends BaseTimeEntity {
     private List<Files> files = new ArrayList<>();
 
     @Builder
-    public Board(String title, String contents, String userId, String password){ // 클래스에 @Builder 를 먹여서 처리하면 현재 서비스 로직에서 file을 먼저 저장하므로 board id 값이 null -> nullpoint
+    public Board(String title, String contents, String userId, String password, Gender gender, int likeCount, Tag tag, boolean declaration){ // 클래스에 @Builder 를 먹여서 처리하면 현재 서비스 로직에서 file을 먼저 저장하므로 board id 값이 null -> nullpoint
         this.title = title;
         this.contents = contents;
         this.userId = userId;
         this.password = password;
+        this.gender = gender;
+        this.likeCount = likeCount;
+        this.tag = tag;
+        this.declaration = declaration;
     }
 
     public void addComment(Comment comment){
@@ -61,6 +84,18 @@ public class Board extends BaseTimeEntity {
     public void update(String title, String contents){
         this.title = title;
         this.contents = contents;
+    }
+
+    public void likeCountUpdate(int likeCount){
+        this.likeCount = likeCount;
+    }
+
+    public void viewCountUpdate(int viewCount){
+        this.viewCount = viewCount;
+    }
+
+    public void declarationUpdate(boolean declaration){
+        this.declaration = declaration;
     }
 
 

@@ -1,7 +1,14 @@
 package com.example.comumnity.domain.commnet.domain;
 
+<<<<<<< HEAD:src/main/java/com/example/blinddate/domain/commnet/domain/Comment.java
+import com.example.blinddate.domain.board.domain.Board;
+import com.example.blinddate.domain.notice.domain.Notice;
+import com.example.blinddate.global.entity.BaseTimeEntity;
+import com.fasterxml.jackson.annotation.JsonProperty;
+=======
 import com.example.comumnity.domain.board.domain.Board;
 import com.example.comumnity.global.entity.BaseTimeEntity;
+>>>>>>> master:src/main/java/com/example/comumnity/domain/commnet/domain/Comment.java
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -32,6 +39,10 @@ public class Comment extends BaseTimeEntity {
     @JoinColumn(name = "board_id")
     private Board board;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "notice_id")
+    private Notice notice;
+
 
     private String contents;
 
@@ -45,6 +56,7 @@ public class Comment extends BaseTimeEntity {
     private List<Comment> childList = new ArrayList<>();
 
     @OneToMany(mappedBy = "comment", orphanRemoval = true)
+    @JsonProperty("re_comment_list")
     private List<ReComment> reCommentList = new ArrayList<>();
 
 
