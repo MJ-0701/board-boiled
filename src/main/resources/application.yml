@@ -33,7 +33,7 @@ spring:
       mode: always
   #      schema-locations: classpath:data.sql
 
-  # Swagger ??
+  # Swagger
   mvc:
     path match:
       matching-strategy: ant_path_matcher
