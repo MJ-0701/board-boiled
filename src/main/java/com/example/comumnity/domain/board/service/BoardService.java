@@ -1,32 +1,18 @@
-<<<<<<< HEAD:src/main/java/com/example/blinddate/domain/board/service/BoardService.java
-package com.example.blinddate.domain.board.service;
 
-import com.example.blinddate.domain.board.domain.Board;
-import com.example.blinddate.domain.board.domain.Tag;
-import com.example.blinddate.domain.board.domain.repository.BoardRepository;
-import com.example.blinddate.domain.board.web.dto.req.BoardSaveReqDto;
-import com.example.blinddate.domain.board.web.dto.req.BoardUpdateReq;
-import com.example.blinddate.domain.board.web.dto.res.BoardListDto;
-import com.example.blinddate.domain.board.web.dto.res.BoardResDto;
-import com.example.blinddate.domain.commnet.service.CommentService;
-import com.example.blinddate.domain.file.domain.Files;
-import com.example.blinddate.domain.file.domain.repository.FilesRepository;
-import com.example.blinddate.domain.file.service.FileHandler;
-=======
 package com.example.comumnity.domain.board.service;
 
 import com.example.comumnity.domain.board.domain.Board;
+import com.example.comumnity.domain.board.domain.Tag;
 import com.example.comumnity.domain.board.domain.repository.BoardRepository;
 import com.example.comumnity.domain.board.web.dto.req.BoardSaveReqDto;
 import com.example.comumnity.domain.board.web.dto.req.BoardUpdateReq;
-import com.example.comumnity.domain.board.web.dto.res.BoardCommentResDto;
+import com.example.comumnity.domain.board.web.dto.res.BoardListDto;
 import com.example.comumnity.domain.board.web.dto.res.BoardResDto;
 import com.example.comumnity.domain.commnet.service.CommentService;
-import com.example.comumnity.domain.commnet.web.dto.res.CommentList;
 import com.example.comumnity.domain.file.domain.Files;
 import com.example.comumnity.domain.file.domain.repository.FilesRepository;
 import com.example.comumnity.domain.file.service.FileService;
->>>>>>> master:src/main/java/com/example/comumnity/domain/board/service/BoardService.java
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -42,7 +28,7 @@ import java.util.stream.Collectors;
 public class BoardService {
 
     private final BoardRepository boardRepository;
-    private final FileHandler fileHandler;
+    private final FileService fileService;
     private final FilesRepository filesRepository;
 
     private final CommentService commentService;
@@ -75,7 +61,7 @@ public class BoardService {
                 .gender(reqDto.getGender())
                 .tag(reqDto.getTag())
                 .build();
-        List<Files> filesList = fileHandler.fileInfo(files);
+        List<Files> filesList = fileService.fileInfo(files);
         // 파일이 존재할 때에만 처리
         if(!filesList.isEmpty()){
             for(Files file : filesList){

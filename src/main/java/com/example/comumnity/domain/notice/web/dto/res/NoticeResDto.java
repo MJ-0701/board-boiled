@@ -1,6 +1,6 @@
-package com.example.blinddate.domain.notice.web.dto.res;
+package com.example.comumnity.domain.notice.web.dto.res;
 
-import com.example.blinddate.domain.notice.domain.Notice;
+import com.example.comumnity.domain.notice.domain.Notice;
 import lombok.Getter;
 
 @Getter

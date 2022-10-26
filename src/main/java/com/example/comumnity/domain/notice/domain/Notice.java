@@ -1,7 +1,8 @@
-package com.example.blinddate.domain.notice.domain;
+package com.example.comumnity.domain.notice.domain;
 
-import com.example.blinddate.domain.commnet.domain.Comment;
-import com.example.blinddate.global.entity.BaseTimeEntity;
+
+import com.example.comumnity.domain.commnet.domain.Comment;
+import com.example.comumnity.global.entity.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

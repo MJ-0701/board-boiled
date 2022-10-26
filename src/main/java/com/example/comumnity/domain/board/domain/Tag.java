@@ -1,4 +1,4 @@
-package com.example.blinddate.domain.board.domain;
+package com.example.comumnity.domain.board.domain;
 
 public enum Tag {
 

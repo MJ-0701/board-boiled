@@ -5,6 +5,7 @@ import com.example.comumnity.domain.board.web.dto.req.BoardDeleteReqDto;
 import com.example.comumnity.domain.board.web.dto.req.BoardSaveReqDto;
 import com.example.comumnity.domain.board.web.dto.req.BoardUpdateReq;
 import com.example.comumnity.domain.board.web.dto.res.BoardCommentResDto;
+import com.example.comumnity.domain.board.web.dto.res.BoardListDto;
 import com.example.comumnity.domain.board.web.dto.res.BoardResDto;
 import com.example.comumnity.domain.board.web.dto.FileVo;
 import lombok.RequiredArgsConstructor;
@@ -45,12 +46,12 @@ public class BoardApiController {
     }
 
     @GetMapping("/list")
-    public ResponseEntity<List<BoardResDto>> findAll(){
+    public ResponseEntity<List<BoardListDto>> findAll(){
         return ResponseEntity.ok(boardService.findAll());
     }
 
     @GetMapping("/comment/{boardId}")
-    public ResponseEntity<BoardCommentResDto> commentResponse(@PathVariable Long boardId, @RequestParam Long commentId){
+    public ResponseEntity<BoardListDto> commentResponse(@PathVariable Long boardId, @RequestParam Long commentId){
         return ResponseEntity.ok(boardService.boardResponse(boardId, commentId));
     }
 

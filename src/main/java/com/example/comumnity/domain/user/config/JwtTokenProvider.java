@@ -1,6 +1,6 @@
-package com.example.blinddate.domain.user.config;
+package com.example.comumnity.domain.user.config;
 
-import com.example.blinddate.domain.user.domain.Role;
+import com.example.comumnity.domain.user.domain.Role;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;

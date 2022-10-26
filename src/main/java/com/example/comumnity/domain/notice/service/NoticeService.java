@@ -1,9 +1,11 @@
-package com.example.blinddate.domain.notice.service;
+package com.example.comumnity.domain.notice.service;
 
-import com.example.blinddate.domain.notice.domain.Notice;
-import com.example.blinddate.domain.notice.domain.repository.NoticeRepository;
-import com.example.blinddate.domain.notice.web.dto.req.NoticeSaveReqDto;
-import com.example.blinddate.domain.notice.web.dto.res.NoticeResDto;
+
+
+import com.example.comumnity.domain.notice.domain.Notice;
+import com.example.comumnity.domain.notice.domain.repository.NoticeRepository;
+import com.example.comumnity.domain.notice.web.dto.req.NoticeSaveReqDto;
+import com.example.comumnity.domain.notice.web.dto.res.NoticeResDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

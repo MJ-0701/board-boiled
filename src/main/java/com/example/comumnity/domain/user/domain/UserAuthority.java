@@ -1,4 +1,4 @@
-package com.example.blinddate.domain.user.domain;
+package com.example.comumnity.domain.user.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

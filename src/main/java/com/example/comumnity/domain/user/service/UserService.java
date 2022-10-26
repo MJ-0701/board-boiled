@@ -1,8 +1,9 @@
-package com.example.blinddate.domain.user.service;
+package com.example.comumnity.domain.user.service;
 
-import com.example.blinddate.domain.user.domain.User;
-import com.example.blinddate.domain.user.domain.UserAuthority;
-import com.example.blinddate.domain.user.domain.repository.UserRepository;
+
+import com.example.comumnity.domain.user.domain.User;
+import com.example.comumnity.domain.user.domain.UserAuthority;
+import com.example.comumnity.domain.user.domain.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

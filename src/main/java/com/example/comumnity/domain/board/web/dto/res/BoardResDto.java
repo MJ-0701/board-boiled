@@ -1,18 +1,10 @@
 package com.example.comumnity.domain.board.web.dto.res;
 
-<<<<<<< HEAD:src/main/java/com/example/blinddate/domain/board/web/dto/res/BoardResDto.java
-import com.example.blinddate.domain.board.domain.Board;
-import com.example.blinddate.domain.board.domain.Tag;
-import com.example.blinddate.domain.commnet.domain.Comment;
-import com.example.blinddate.domain.commnet.domain.ReComment;
-import com.example.blinddate.domain.commnet.web.dto.res.CommentList;
-import com.example.blinddate.domain.commnet.web.dto.res.ReCommentList;
-import com.example.blinddate.domain.file.domain.Files;
-=======
 import com.example.comumnity.domain.board.domain.Board;
+import com.example.comumnity.domain.board.domain.Tag;
 import com.example.comumnity.domain.commnet.domain.Comment;
+import com.example.comumnity.domain.commnet.web.dto.res.CommentList;
 import com.example.comumnity.domain.file.domain.Files;
->>>>>>> master:src/main/java/com/example/comumnity/domain/board/web/dto/res/BoardResDto.java
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 

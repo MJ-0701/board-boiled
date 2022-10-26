@@ -1,4 +1,4 @@
-package com.example.blinddate.domain.user.config;
+package com.example.comumnity.domain.user.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;

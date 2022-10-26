@@ -1,8 +1,5 @@
-<<<<<<< HEAD:src/main/java/com/example/comumnity/domain/board/web/controller/BoardController.java
-package com.example.blinddate.domain.board.web.controller;
-=======
-package com.example.comumnity.domain.board.web;
->>>>>>> master:src/main/java/com/example/comumnity/domain/board/web/BoardController.java
+package com.example.comumnity.domain.board.web.controller;
+
 
 import com.example.comumnity.domain.board.service.BoardService;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package com.example.blinddate.domain.user.web.dto.req;
+package com.example.comumnity.domain.user.web.dto.req;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

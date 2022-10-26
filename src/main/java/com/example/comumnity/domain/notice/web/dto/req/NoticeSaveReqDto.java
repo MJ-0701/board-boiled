@@ -1,4 +1,4 @@
-package com.example.blinddate.domain.notice.web.dto.req;
+package com.example.comumnity.domain.notice.web.dto.req;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

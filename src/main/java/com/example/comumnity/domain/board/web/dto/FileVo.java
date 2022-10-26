@@ -1,7 +1,7 @@
 package com.example.comumnity.domain.board.web.dto;
 
-import com.example.blinddate.domain.board.domain.Tag;
-import com.example.blinddate.domain.user.domain.Gender;
+import com.example.comumnity.domain.board.domain.Tag;
+import com.example.comumnity.domain.user.domain.Gender;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 import org.springframework.web.multipart.MultipartFile;
