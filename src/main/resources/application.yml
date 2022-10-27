@@ -26,8 +26,8 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: jack
-    password: jack
+    username: root
+    password: root
   sql:
     init:
       mode: always

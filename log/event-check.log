@@ -1138,3 +1138,527 @@ Caused by: java.sql.SQLException: Access denied for user 'jack'@'localhost' (usi
 	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44) ~[hibernate-core-5.6.10.Final.jar:5.6.10.Final]
 	... 123 common frames omitted
 
+2022-10-27 12:04:42.468  INFO 12560 --- [Test worker] c.e.comumnity.CommunityApplicationTests  : Starting CommunityApplicationTests using Java 11.0.16.1 on DESKTOP-5SH5M1R with PID 12560 (started by diffchild_chae in C:\Users\diffchild_chae\IdeaProjects\community-board)
+2022-10-27 12:04:42.468  INFO 12560 --- [Test worker] c.e.comumnity.CommunityApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2022-10-27 12:04:42.978  INFO 12560 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-27 12:04:43.025  INFO 12560 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 6 JPA repository interfaces.
+2022-10-27 12:04:43.603  INFO 12560 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-27 12:04:43.635  INFO 12560 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-10-27 12:04:43.744  INFO 12560 --- [Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-27 12:04:43.760 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@615c4ea4
+2022-10-27 12:04:43.760 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@615c4ea4
+2022-10-27 12:04:43.760 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@615c4ea4
+2022-10-27 12:04:43.760 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@1dd76982
+2022-10-27 12:04:43.760 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.TrueFalseType@23f8036d
+2022-10-27 12:04:43.760 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.YesNoType@4805069b
+2022-10-27 12:04:43.760 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@476c137b
+2022-10-27 12:04:43.760 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@476c137b
+2022-10-27 12:04:43.760 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@476c137b
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.CharacterType@4f6ff62
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.CharacterType@4f6ff62
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@4f6ff62
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@6e9f8160
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@6e9f8160
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.ShortType@6e9f8160
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.IntegerType@54ca9420
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.IntegerType@54ca9420
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@54ca9420
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@6f6f65a4
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@6f6f65a4
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.LongType@6f6f65a4
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@16ef1160
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@16ef1160
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.FloatType@16ef1160
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@53918b5e
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@53918b5e
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@53918b5e
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@1280bae3
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@1280bae3
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BigIntegerType@4780341
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@4780341
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.StringType@50bb1c1f
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.StringType@50bb1c1f
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.StringNVarcharType@b4d83ac
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@73ae82da
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.UrlType@1468e880
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.UrlType@1468e880
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.DurationType@75f8d9b0
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.DurationType@75f8d9b0
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Instant -> org.hibernate.type.InstantType@29c80149
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.InstantType@29c80149
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@17ec5e2a
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@17ec5e2a
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.LocalDateType@268f0ff3
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@268f0ff3
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@55746340
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@55746340
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@10408ea
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@10408ea
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@5e7e7a7e
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@5e7e7a7e
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@7b795db7
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@7b795db7
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.DateType@40ddf339
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.DateType@40ddf339
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.TimeType@12200670
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.TimeType@12200670
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.TimestampType@7ccf6114
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@7ccf6114
+2022-10-27 12:04:43.775 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.TimestampType@7ccf6114
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@6614289a
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.CalendarType@2633d09c
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@2633d09c
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@2633d09c
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@3749c2b
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@6150afc6
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.LocaleType@4f82248f
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@4f82248f
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.CurrencyType@4a2d66e
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@4a2d66e
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.TimeZoneType@77d959f1
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@77d959f1
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.ClassType@432f4626
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.ClassType@432f4626
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@6dde1bf5
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@6dde1bf5
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@1ea96ff2
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BinaryType@12e3f4ae
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BinaryType@12e3f4ae
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BinaryType@12e3f4ae
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@4ad3969
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@4ad3969
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@4ad3969
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.RowVersionType@924f3f1
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.ImageType@7d5a0b14
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.CharArrayType@7157413e
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.CharArrayType@7157413e
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.CharArrayType@7157413e
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@312819ae
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@312819ae
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@312819ae
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.TextType@196d684b
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.NTextType@54bc3bcf
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BlobType@7619fbe7
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@7619fbe7
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@c0004b7
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.ClobType@4d75c604
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@4d75c604
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.NClobType@15ad5acb
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@15ad5acb
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@183ef89a
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@5a8b42a3
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.SerializableType@12532e37
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.ObjectType@5c2a3f0c
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@5c2a3f0c
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@5ca4c88a
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@1791e231
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@55397d15
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@5e360c3b
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@24ac6fef
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@3cb49121
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@227b9277
+2022-10-27 12:04:43.791 DEBUG 12560 --- [Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@4c4215d7
+2022-10-27 12:04:43.822  INFO 12560 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-27 12:04:44.010  INFO 12560 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-27 12:04:44.030  INFO 12560 --- [Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-10-27 12:04:44.036 DEBUG 12560 --- [Test worker] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@53d2f0ec] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@560be8c0]
+2022-10-27 12:04:44.255 DEBUG 12560 --- [Test worker] org.hibernate.type.EnumType              : Using NAMED-based conversion for Enum com.example.comumnity.domain.user.domain.Gender
+2022-10-27 12:04:44.270 DEBUG 12560 --- [Test worker] org.hibernate.type.EnumType              : Using NAMED-based conversion for Enum com.example.comumnity.domain.user.domain.Role
+2022-10-27 12:04:44.270 DEBUG 12560 --- [Test worker] org.hibernate.type.EnumType              : Using ORDINAL-based conversion for Enum com.example.comumnity.domain.user.domain.Gender
+2022-10-27 12:04:44.270 DEBUG 12560 --- [Test worker] org.hibernate.type.EnumType              : Using ORDINAL-based conversion for Enum com.example.comumnity.domain.board.domain.Tag
+2022-10-27 12:04:44.270 DEBUG 12560 --- [Test worker] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@53d2f0ec] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@7254a68a]
+2022-10-27 12:04:44.532  INFO 12560 --- [Test worker] p6spy                                    : #1666839884532 | took 19ms | statement | connection 1| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table comment 
+       drop 
+       foreign key FKlij9oor1nav89jeat35s6kbp1
+
+    alter table comment 
+       drop 
+       foreign key FKlij9oor1nav89jeat35s6kbp1;
+2022-10-27 12:04:44.532  INFO 12560 --- [Test worker] p6spy                                    : #1666839884532 | took 5ms | statement | connection 1| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table comment 
+       drop 
+       foreign key FKq7rr5epaoagevts8cop65o31h
+
+    alter table comment 
+       drop 
+       foreign key FKq7rr5epaoagevts8cop65o31h;
+2022-10-27 12:04:44.532  INFO 12560 --- [Test worker] p6spy                                    : #1666839884532 | took 4ms | statement | connection 1| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table comment 
+       drop 
+       foreign key FKde3rfu96lep00br5ov0mdieyt
+
+    alter table comment 
+       drop 
+       foreign key FKde3rfu96lep00br5ov0mdieyt;
+2022-10-27 12:04:44.548  INFO 12560 --- [Test worker] p6spy                                    : #1666839884548 | took 4ms | statement | connection 1| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table files 
+       drop 
+       foreign key FKmql4ppp70cnt839xngxie3v25
+
+    alter table files 
+       drop 
+       foreign key FKmql4ppp70cnt839xngxie3v25;
+2022-10-27 12:04:44.548  INFO 12560 --- [Test worker] p6spy                                    : #1666839884548 | took 5ms | statement | connection 1| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table re_comment 
+       drop 
+       foreign key FKlbau13r2qs2dvla5g9k3xnmpd
+
+    alter table re_comment 
+       drop 
+       foreign key FKlbau13r2qs2dvla5g9k3xnmpd;
+2022-10-27 12:04:44.548  INFO 12560 --- [Test worker] p6spy                                    : #1666839884548 | took 4ms | statement | connection 1| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table user_authority 
+       drop 
+       foreign key user_id
+
+    alter table user_authority 
+       drop 
+       foreign key user_id;
+2022-10-27 12:04:44.548  INFO 12560 --- [Test worker] p6spy                                    : #1666839884548 | took 2ms | statement | connection 1| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists board
+
+    drop table if exists board;
+2022-10-27 12:04:44.563  INFO 12560 --- [Test worker] p6spy                                    : #1666839884563 | took 3ms | statement | connection 1| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists comment
+
+    drop table if exists comment;
+2022-10-27 12:04:44.563  INFO 12560 --- [Test worker] p6spy                                    : #1666839884563 | took 2ms | statement | connection 1| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists files
+
+    drop table if exists files;
+2022-10-27 12:04:44.563  INFO 12560 --- [Test worker] p6spy                                    : #1666839884563 | took 3ms | statement | connection 1| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists notice
+
+    drop table if exists notice;
+2022-10-27 12:04:44.563  INFO 12560 --- [Test worker] p6spy                                    : #1666839884563 | took 2ms | statement | connection 1| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists re_comment
+
+    drop table if exists re_comment;
+2022-10-27 12:04:44.563  INFO 12560 --- [Test worker] p6spy                                    : #1666839884563 | took 2ms | statement | connection 1| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists test
+
+    drop table if exists test;
+2022-10-27 12:04:44.579  INFO 12560 --- [Test worker] p6spy                                    : #1666839884579 | took 3ms | statement | connection 1| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists user
+
+    drop table if exists user;
+2022-10-27 12:04:44.579  INFO 12560 --- [Test worker] p6spy                                    : #1666839884579 | took 2ms | statement | connection 1| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists user_authority
+
+    drop table if exists user_authority;
+2022-10-27 12:04:44.579  INFO 12560 --- [Test worker] p6spy                                    : #1666839884579 | took 5ms | statement | connection 2| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table board (
+       board_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        contents longtext,
+        declaration bit not null,
+        gender integer,
+        like_count integer not null,
+        password varchar(255),
+        tag integer,
+        title varchar(255),
+        user_id varchar(255),
+        view_count integer not null,
+        primary key (board_id)
+    ) engine=InnoDB
+
+    create table board (
+       board_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        contents longtext,
+        declaration bit not null,
+        gender integer,
+        like_count integer not null,
+        password varchar(255),
+        tag integer,
+        title varchar(255),
+        user_id varchar(255),
+        view_count integer not null,
+        primary key (board_id)
+    ) engine=InnoDB;
+2022-10-27 12:04:44.594  INFO 12560 --- [Test worker] p6spy                                    : #1666839884594 | took 5ms | statement | connection 2| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table comment (
+       comment_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        contents varchar(255),
+        is_removed bit not null,
+        nick_name varchar(255),
+        password varchar(255),
+        board_id bigint,
+        notice_id bigint,
+        parent_id bigint,
+        primary key (comment_id)
+    ) engine=InnoDB
+
+    create table comment (
+       comment_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        contents varchar(255),
+        is_removed bit not null,
+        nick_name varchar(255),
+        password varchar(255),
+        board_id bigint,
+        notice_id bigint,
+        parent_id bigint,
+        primary key (comment_id)
+    ) engine=InnoDB;
+2022-10-27 12:04:44.594  INFO 12560 --- [Test worker] p6spy                                    : #1666839884594 | took 5ms | statement | connection 2| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table files (
+       files_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        file_path varchar(255),
+        file_size bigint,
+        original_file_name varchar(255),
+        board_id bigint,
+        primary key (files_id)
+    ) engine=InnoDB
+
+    create table files (
+       files_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        file_path varchar(255),
+        file_size bigint,
+        original_file_name varchar(255),
+        board_id bigint,
+        primary key (files_id)
+    ) engine=InnoDB;
+2022-10-27 12:04:44.610  INFO 12560 --- [Test worker] p6spy                                    : #1666839884610 | took 5ms | statement | connection 2| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table notice (
+       notice_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        contents varchar(255),
+        declaration bit not null,
+        like_count integer not null,
+        title varchar(255),
+        primary key (notice_id)
+    ) engine=InnoDB
+
+    create table notice (
+       notice_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        contents varchar(255),
+        declaration bit not null,
+        like_count integer not null,
+        title varchar(255),
+        primary key (notice_id)
+    ) engine=InnoDB;
+2022-10-27 12:04:44.610  INFO 12560 --- [Test worker] p6spy                                    : #1666839884610 | took 5ms | statement | connection 2| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table re_comment (
+       recomment_id bigint not null auto_increment,
+        contents varchar(255),
+        is_removed bit not null,
+        nick_name varchar(255),
+        password varchar(255),
+        comment_id bigint,
+        primary key (recomment_id)
+    ) engine=InnoDB
+
+    create table re_comment (
+       recomment_id bigint not null auto_increment,
+        contents varchar(255),
+        is_removed bit not null,
+        nick_name varchar(255),
+        password varchar(255),
+        comment_id bigint,
+        primary key (recomment_id)
+    ) engine=InnoDB;
+2022-10-27 12:04:44.610  INFO 12560 --- [Test worker] p6spy                                    : #1666839884610 | took 5ms | statement | connection 2| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table test (
+       test_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        contents varchar(255),
+        name varchar(255),
+        primary key (test_id)
+    ) engine=InnoDB
+
+    create table test (
+       test_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        contents varchar(255),
+        name varchar(255),
+        primary key (test_id)
+    ) engine=InnoDB;
+2022-10-27 12:04:44.626  INFO 12560 --- [Test worker] p6spy                                    : #1666839884626 | took 5ms | statement | connection 2| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table user (
+       user_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        account varchar(255),
+        birth varchar(255),
+        email varchar(255),
+        enabled bit not null,
+        gender varchar(255),
+        nick_name varchar(255),
+        password varchar(255),
+        role varchar(255),
+        user_name varchar(255),
+        primary key (user_id)
+    ) engine=InnoDB
+
+    create table user (
+       user_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        account varchar(255),
+        birth varchar(255),
+        email varchar(255),
+        enabled bit not null,
+        gender varchar(255),
+        nick_name varchar(255),
+        password varchar(255),
+        role varchar(255),
+        user_name varchar(255),
+        primary key (user_id)
+    ) engine=InnoDB;
+2022-10-27 12:04:44.626  INFO 12560 --- [Test worker] p6spy                                    : #1666839884626 | took 4ms | statement | connection 2| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table user_authority (
+       authority_id bigint not null,
+        authority varchar(255) not null,
+        user_id bigint,
+        primary key (authority_id, authority)
+    ) engine=InnoDB
+
+    create table user_authority (
+       authority_id bigint not null,
+        authority varchar(255) not null,
+        user_id bigint,
+        primary key (authority_id, authority)
+    ) engine=InnoDB;
+2022-10-27 12:04:44.641  INFO 12560 --- [Test worker] p6spy                                    : #1666839884641 | took 11ms | statement | connection 2| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table comment 
+       add constraint FKlij9oor1nav89jeat35s6kbp1 
+       foreign key (board_id) 
+       references board (board_id)
+
+    alter table comment 
+       add constraint FKlij9oor1nav89jeat35s6kbp1 
+       foreign key (board_id) 
+       references board (board_id);
+2022-10-27 12:04:44.641  INFO 12560 --- [Test worker] p6spy                                    : #1666839884641 | took 11ms | statement | connection 2| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table comment 
+       add constraint FKq7rr5epaoagevts8cop65o31h 
+       foreign key (notice_id) 
+       references notice (notice_id)
+
+    alter table comment 
+       add constraint FKq7rr5epaoagevts8cop65o31h 
+       foreign key (notice_id) 
+       references notice (notice_id);
+2022-10-27 12:04:44.657  INFO 12560 --- [Test worker] p6spy                                    : #1666839884657 | took 13ms | statement | connection 2| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table comment 
+       add constraint FKde3rfu96lep00br5ov0mdieyt 
+       foreign key (parent_id) 
+       references comment (comment_id)
+
+    alter table comment 
+       add constraint FKde3rfu96lep00br5ov0mdieyt 
+       foreign key (parent_id) 
+       references comment (comment_id);
+2022-10-27 12:04:44.672  INFO 12560 --- [Test worker] p6spy                                    : #1666839884672 | took 10ms | statement | connection 2| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table files 
+       add constraint FKmql4ppp70cnt839xngxie3v25 
+       foreign key (board_id) 
+       references board (board_id)
+
+    alter table files 
+       add constraint FKmql4ppp70cnt839xngxie3v25 
+       foreign key (board_id) 
+       references board (board_id);
+2022-10-27 12:04:44.688  INFO 12560 --- [Test worker] p6spy                                    : #1666839884688 | took 15ms | statement | connection 2| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table re_comment 
+       add constraint FKlbau13r2qs2dvla5g9k3xnmpd 
+       foreign key (comment_id) 
+       references comment (comment_id)
+
+    alter table re_comment 
+       add constraint FKlbau13r2qs2dvla5g9k3xnmpd 
+       foreign key (comment_id) 
+       references comment (comment_id);
+2022-10-27 12:04:44.704  INFO 12560 --- [Test worker] p6spy                                    : #1666839884704 | took 16ms | statement | connection 2| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table user_authority 
+       add constraint user_id 
+       foreign key (user_id) 
+       references user (user_id)
+
+    alter table user_authority 
+       add constraint user_id 
+       foreign key (user_id) 
+       references user (user_id);
+2022-10-27 12:04:44.704  INFO 12560 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-27 12:04:44.719 TRACE 12560 --- [Test worker] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@7254a68a] for TypeConfiguration
+2022-10-27 12:04:44.719  INFO 12560 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-27 12:04:45.397  WARN 12560 --- [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-27 12:04:45.616  INFO 12560 --- [Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-10-27 12:04:45.876  INFO 12560 --- [Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-10-27 12:04:46.273  INFO 12560 --- [Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4001dc35, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@399ef33f, org.springframework.security.web.context.SecurityContextPersistenceFilter@3d0c88f4, org.springframework.security.web.header.HeaderWriterFilter@9c88323, org.springframework.security.web.csrf.CsrfFilter@674cd2da, org.springframework.security.web.authentication.logout.LogoutFilter@2cbb9702, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@eba64a9, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7f9083b4, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@39b752f4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@39a809db, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@732ffb6a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ed83e36, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1990afa2, org.springframework.security.web.session.SessionManagementFilter@256a25a8, org.springframework.security.web.access.ExceptionTranslationFilter@196c8b93, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@747e0a31]
+2022-10-27 12:04:46.320  INFO 12560 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-10-27 12:04:46.336  INFO 12560 --- [Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-10-27 12:04:46.367  INFO 12560 --- [Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-10-27 12:04:46.507  INFO 12560 --- [Test worker] c.e.comumnity.CommunityApplicationTests  : Started CommunityApplicationTests in 4.239 seconds (JVM running for 4.935)
+2022-10-27 12:04:46.523  INFO 12560 --- [Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@9257031 testClass = CommunityApplicationTests, testInstance = com.example.comumnity.CommunityApplicationTests@3b3fa4c0, testMethod = contextLoads@CommunityApplicationTests, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@75201592 testClass = CommunityApplicationTests, locations = '{}', classes = '{class com.example.comumnity.CommunityApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7894f09b, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@f0e995e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@150ab4ed, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5ce33a58, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6e1d8f9e, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@62833051], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@3d1b91d1]; rollback [true]
+2022-10-27 12:04:46.633 TRACE 12560 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [TIMESTAMP] - [2022-10-27T12:04:46.601718600]
+2022-10-27 12:04:46.633 TRACE 12560 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [TIMESTAMP] - [2022-10-27T12:04:46.601718600]
+2022-10-27 12:04:46.633 TRACE 12560 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [null]
+2022-10-27 12:04:46.633 TRACE 12560 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [VARCHAR] - [null]
+2022-10-27 12:04:46.633 TRACE 12560 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [5] as [VARCHAR] - [null]
+2022-10-27 12:04:46.633 TRACE 12560 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [6] as [BOOLEAN] - [false]
+2022-10-27 12:04:46.633 TRACE 12560 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [7] as [VARCHAR] - [null]
+2022-10-27 12:04:46.633 TRACE 12560 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [8] as [VARCHAR] - [null]
+2022-10-27 12:04:46.633 TRACE 12560 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [9] as [VARCHAR] - [null]
+2022-10-27 12:04:46.633 TRACE 12560 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [10] as [VARCHAR] - [null]
+2022-10-27 12:04:46.633 TRACE 12560 --- [Test worker] o.h.type.descriptor.sql.BasicBinder      : binding parameter [11] as [VARCHAR] - [null]
+2022-10-27 12:04:46.633  INFO 12560 --- [Test worker] p6spy                                    : #1666839886633 | took 4ms | statement | connection 3| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+insert into user (created_at, updated_at, account, birth, email, enabled, gender, nick_name, password, role, user_name) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+insert into user (created_at, updated_at, account, birth, email, enabled, gender, nick_name, password, role, user_name) values ('2022-10-27T12:04:46.601+0900', '2022-10-27T12:04:46.601+0900', NULL, NULL, NULL, false, NULL, NULL, NULL, NULL, NULL);
+2022-10-27 12:04:46.711  INFO 12560 --- [Test worker] p6spy                                    : #1666839886711 | took 3ms | statement | connection 3| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+select user0_.user_id as user_id1_6_, user0_.created_at as created_2_6_, user0_.updated_at as updated_3_6_, user0_.account as account4_6_, user0_.birth as birth5_6_, user0_.email as email6_6_, user0_.enabled as enabled7_6_, user0_.gender as gender8_6_, user0_.nick_name as nick_nam9_6_, user0_.password as passwor10_6_, user0_.role as role11_6_, user0_.user_name as user_na12_6_ from user user0_
+select user0_.user_id as user_id1_6_, user0_.created_at as created_2_6_, user0_.updated_at as updated_3_6_, user0_.account as account4_6_, user0_.birth as birth5_6_, user0_.email as email6_6_, user0_.enabled as enabled7_6_, user0_.gender as gender8_6_, user0_.nick_name as nick_nam9_6_, user0_.password as passwor10_6_, user0_.role as role11_6_, user0_.user_name as user_na12_6_ from user user0_;
+2022-10-27 12:04:46.711 TRACE 12560 --- [Test worker] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([user_id1_6_] : [BIGINT]) - [1]
+2022-10-27 12:04:46.757  INFO 12560 --- [Test worker] p6spy                                    : #1666839886757 | took 0ms | rollback | connection 3| url jdbc:mysql://localhost:3306/blind_date?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+;
+2022-10-27 12:04:46.757  INFO 12560 --- [Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@9257031 testClass = CommunityApplicationTests, testInstance = com.example.comumnity.CommunityApplicationTests@3b3fa4c0, testMethod = contextLoads@CommunityApplicationTests, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@75201592 testClass = CommunityApplicationTests, locations = '{}', classes = '{class com.example.comumnity.CommunityApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@7894f09b, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@f0e995e, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@150ab4ed, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5ce33a58, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6e1d8f9e, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@62833051], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
+2022-10-27 12:04:46.773  INFO 12560 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-27 12:04:46.773 TRACE 12560 --- [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@7254a68a] for TypeConfiguration
+2022-10-27 12:04:46.773 DEBUG 12560 --- [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@17d85f38] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@7254a68a]
+2022-10-27 12:04:46.773  INFO 12560 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-27 12:04:46.773  INFO 12560 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
