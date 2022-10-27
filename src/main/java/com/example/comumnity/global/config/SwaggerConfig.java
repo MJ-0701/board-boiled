@@ -1,4 +1,4 @@
-package com.example.blinddate.global.config;
+package com.example.comumnity.global.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

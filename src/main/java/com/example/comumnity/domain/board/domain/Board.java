@@ -1,17 +1,14 @@
 package com.example.comumnity.domain.board.domain;
 
-<<<<<<< HEAD:src/main/java/com/example/blinddate/domain/board/domain/Board.java
-import com.example.blinddate.domain.commnet.domain.Comment;
-import com.example.blinddate.domain.file.domain.Files;
-import com.example.blinddate.domain.user.domain.Gender;
-import com.example.blinddate.global.entity.BaseTimeEntity;
+
+import com.example.comumnity.domain.user.domain.Gender;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
-=======
+
 import com.example.comumnity.domain.commnet.domain.Comment;
 import com.example.comumnity.domain.file.domain.Files;
 import com.example.comumnity.global.entity.BaseTimeEntity;
->>>>>>> master:src/main/java/com/example/comumnity/domain/board/domain/Board.java
+
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

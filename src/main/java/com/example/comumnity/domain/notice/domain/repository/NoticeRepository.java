@@ -1,6 +1,7 @@
-package com.example.blinddate.domain.notice.domain.repository;
+package com.example.comumnity.domain.notice.domain.repository;
 
-import com.example.blinddate.domain.notice.domain.Notice;
+
+import com.example.comumnity.domain.notice.domain.Notice;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface NoticeRepository extends JpaRepository<Notice, Long> {

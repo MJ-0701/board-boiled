@@ -1,6 +1,7 @@
-package com.example.blinddate.domain.user.domain.repository;
+package com.example.comumnity.domain.user.domain.repository;
 
-import com.example.blinddate.domain.user.domain.User;
+
+import com.example.comumnity.domain.user.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

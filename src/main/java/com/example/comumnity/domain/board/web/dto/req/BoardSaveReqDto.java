@@ -1,7 +1,6 @@
 package com.example.comumnity.domain.board.web.dto.req;
-
-import com.example.blinddate.domain.board.domain.Tag;
-import com.example.blinddate.domain.user.domain.Gender;
+import com.example.comumnity.domain.board.domain.Tag;
+import com.example.comumnity.domain.user.domain.Gender;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

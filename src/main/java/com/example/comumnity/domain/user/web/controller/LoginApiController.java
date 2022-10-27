@@ -1,10 +1,9 @@
-package com.example.blinddate.domain.user.web.controller;
-
-import com.example.blinddate.domain.user.config.JwtTokenProvider;
-import com.example.blinddate.domain.user.domain.Role;
-import com.example.blinddate.domain.user.domain.User;
-import com.example.blinddate.domain.user.service.UserService;
-import com.example.blinddate.domain.user.web.dto.req.UserLoginReqDto;
+package com.example.comumnity.domain.user.web.controller;
+import com.example.comumnity.domain.user.config.JwtTokenProvider;
+import com.example.comumnity.domain.user.domain.Role;
+import com.example.comumnity.domain.user.domain.User;
+import com.example.comumnity.domain.user.service.UserService;
+import com.example.comumnity.domain.user.web.dto.req.UserLoginReqDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,8 +1,9 @@
-package com.example.blinddate.domain.notice.web.controller;
+package com.example.comumnity.domain.notice.web.controller;
 
-import com.example.blinddate.domain.notice.service.NoticeService;
-import com.example.blinddate.domain.notice.web.dto.req.NoticeSaveReqDto;
-import com.example.blinddate.domain.notice.web.dto.res.NoticeResDto;
+
+import com.example.comumnity.domain.notice.service.NoticeService;
+import com.example.comumnity.domain.notice.web.dto.req.NoticeSaveReqDto;
+import com.example.comumnity.domain.notice.web.dto.res.NoticeResDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class NoticeApiController {
 
-    private final  NoticeService noticeService;
+    private final NoticeService noticeService;
 
     // C
     @PostMapping("/save")

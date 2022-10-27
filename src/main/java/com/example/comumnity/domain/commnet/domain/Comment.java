@@ -1,14 +1,9 @@
 package com.example.comumnity.domain.commnet.domain;
-
-<<<<<<< HEAD:src/main/java/com/example/blinddate/domain/commnet/domain/Comment.java
-import com.example.blinddate.domain.board.domain.Board;
-import com.example.blinddate.domain.notice.domain.Notice;
-import com.example.blinddate.global.entity.BaseTimeEntity;
+import com.example.comumnity.domain.notice.domain.Notice;
 import com.fasterxml.jackson.annotation.JsonProperty;
-=======
+
 import com.example.comumnity.domain.board.domain.Board;
 import com.example.comumnity.global.entity.BaseTimeEntity;
->>>>>>> master:src/main/java/com/example/comumnity/domain/commnet/domain/Comment.java
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

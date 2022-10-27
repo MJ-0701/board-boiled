@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Component
-public class FileHandler {
+public class FileService {
 
     public List<Files> fileInfo(
             List<MultipartFile> multipartFiles

@@ -1,4 +1,4 @@
-package com.example.blinddate.domain.board.aop;
+package com.example.comumnity.domain.board.aop;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
@@ -20,12 +20,12 @@ import java.util.stream.Collectors;
 public class TimerAop {
 
 
-    @Pointcut("execution(* com.example.blinddate.domain.board.web.controller..*.*(..))")
+    @Pointcut("execution(* com.example.comumnity.domain.board.web.controller..*.*(..))")
     private void cut(){
 
     }
 
-    @Pointcut("@annotation(com.example.blinddate.global.annotation.Timer)")
+    @Pointcut("@annotation(com.example.comumnity.global.annotation.Timer)")
     private void enableTimer(){
 
     }

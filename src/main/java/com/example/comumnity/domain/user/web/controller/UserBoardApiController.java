@@ -1,7 +1,8 @@
-package com.example.blinddate.domain.user.web.controller;
+package com.example.comumnity.domain.user.web.controller;
 
-import com.example.blinddate.domain.board.service.BoardService;
-import com.example.blinddate.domain.user.service.UserService;
+
+import com.example.comumnity.domain.board.service.BoardService;
+import com.example.comumnity.domain.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

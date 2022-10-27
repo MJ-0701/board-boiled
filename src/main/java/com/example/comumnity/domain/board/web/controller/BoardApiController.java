@@ -1,22 +1,20 @@
-package com.example.blinddate.domain.board.web.controller;
+package com.example.comumnity.domain.board.web.controller;
 
-import com.example.blinddate.domain.board.domain.Board;
-import com.example.blinddate.domain.board.domain.Tag;
-import com.example.blinddate.domain.board.service.BoardService;
-import com.example.blinddate.domain.board.web.dto.req.BoardDeleteReqDto;
-import com.example.blinddate.domain.board.web.dto.req.BoardSaveReqDto;
-import com.example.blinddate.domain.board.web.dto.req.BoardUpdateReq;
-import com.example.blinddate.domain.board.web.dto.res.BoardListDto;
-import com.example.blinddate.domain.board.web.dto.res.BoardResDto;
-import com.example.blinddate.domain.board.web.dto.FileVo;
-import com.example.blinddate.global.annotation.Timer;
+import com.example.comumnity.domain.board.domain.Tag;
+import com.example.comumnity.domain.board.service.BoardService;
+import com.example.comumnity.domain.board.web.dto.FileVo;
+import com.example.comumnity.domain.board.web.dto.req.BoardDeleteReqDto;
+import com.example.comumnity.domain.board.web.dto.req.BoardSaveReqDto;
+import com.example.comumnity.domain.board.web.dto.req.BoardUpdateReq;
+import com.example.comumnity.domain.board.web.dto.res.BoardListDto;
+import com.example.comumnity.domain.board.web.dto.res.BoardResDto;
+import com.example.comumnity.global.annotation.Timer;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -95,12 +93,6 @@ public class BoardApiController {
             @PageableDefault(size = 5, sort = "id", direction = Sort.Direction.DESC)Pageable pageable,
             @RequestParam String keyword){ // 페이징 dto 만들어서 처리할것.
         Page<BoardListDto> paging = boardService.searchPaging(keyword, pageable); // 요소 6개 기준
-//        System.out.println("페이지 수 :" + paging.getTotalPages()); // 2
-//        System.out.println("previous :" + pageable.previousOrFirst().getPageNumber());
-//        System.out.println("next :" + pageable.next().getPageNumber());
-//        System.out.println("hasPrev :" + paging.hasPrevious());
-//        System.out.println("hasNext :" + paging.hasNext());
-//        System.out.println("현재 페이지 :" + pageable.getPageNumber());
         return ResponseEntity.ok(paging.getContent());
     }
 

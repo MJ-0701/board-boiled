@@ -1,9 +1,10 @@
-package com.example.blinddate.domain.user.web.dto.req;
+package com.example.comumnity.domain.user.web.dto.req;
 
-import com.example.blinddate.domain.user.domain.Gender;
-import com.example.blinddate.domain.user.domain.Role;
-import com.example.blinddate.domain.user.domain.User;
-import com.example.blinddate.domain.user.domain.UserAuthority;
+
+import com.example.comumnity.domain.user.domain.Gender;
+import com.example.comumnity.domain.user.domain.Role;
+import com.example.comumnity.domain.user.domain.User;
+import com.example.comumnity.domain.user.domain.UserAuthority;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

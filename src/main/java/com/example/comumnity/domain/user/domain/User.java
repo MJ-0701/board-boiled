@@ -1,6 +1,7 @@
-package com.example.blinddate.domain.user.domain;
+package com.example.comumnity.domain.user.domain;
 
-import com.example.blinddate.global.entity.BaseTimeEntity;
+
+import com.example.comumnity.global.entity.BaseTimeEntity;
 import lombok.*;
 import org.springframework.security.core.userdetails.UserDetails;
 

@@ -1,8 +1,9 @@
-package com.example.blinddate.domain.user.web.controller;
+package com.example.comumnity.domain.user.web.controller;
 
-import com.example.blinddate.domain.user.domain.User;
-import com.example.blinddate.domain.user.service.UserService;
-import com.example.blinddate.domain.user.web.dto.req.UserSignUpReqDto;
+
+import com.example.comumnity.domain.user.domain.User;
+import com.example.comumnity.domain.user.service.UserService;
+import com.example.comumnity.domain.user.web.dto.req.UserSignUpReqDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

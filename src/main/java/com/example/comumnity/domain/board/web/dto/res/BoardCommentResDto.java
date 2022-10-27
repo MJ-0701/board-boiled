@@ -1,24 +1,16 @@
 package com.example.comumnity.domain.board.web.dto.res;
 
-<<<<<<< HEAD:src/main/java/com/example/comumnity/domain/board/web/dto/res/BoardListDto.java
-import com.example.blinddate.domain.board.domain.Board;
-import com.example.blinddate.domain.board.domain.Tag;
-import com.example.blinddate.domain.commnet.web.dto.res.CommentList;
-import com.example.blinddate.domain.file.domain.Files;
-import com.example.blinddate.domain.user.domain.Gender;
-=======
 import com.example.comumnity.domain.board.domain.Board;
+import com.example.comumnity.domain.board.domain.Tag;
 import com.example.comumnity.domain.commnet.web.dto.res.CommentList;
-import com.example.comumnity.domain.file.domain.Files;
->>>>>>> master:src/main/java/com/example/comumnity/domain/board/web/dto/res/BoardCommentResDto.java
+import com.example.comumnity.domain.user.domain.Gender;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Getter
-public class BoardListDto {
+public class BoardCommentResDto {
 
     private final Long id;
     private final String title;
@@ -35,12 +27,7 @@ public class BoardListDto {
     private final Tag tag;
 
 
-
-
-
-
-
-    public BoardListDto(Board entity){
+    public BoardCommentResDto(Board entity) {
         this.id = entity.getId();
         this.title = entity.getTitle();
         this.contents = entity.getContents();
@@ -48,6 +35,5 @@ public class BoardListDto {
         this.gender = entity.getGender();
         this.viewCount = entity.getViewCount();
         this.tag = entity.getTag();
-
     }
 }
