@@ -1,0 +1,11 @@
+spring :
+  # DB
+  datasource:
+    url: jdbc:mysql://localhost:3306/community_test?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root # root -> 회사 jack -> 개인
+    password: root
+  sql:
+    init:
+      mode: always
+  #      schema-locations: classpath:data.sql
