@@ -37,4 +37,4 @@ out/
 .vscode/
 
 ### SECRET ###
-secret.yml
+application-secret.yml
