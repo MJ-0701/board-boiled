@@ -45,13 +45,6 @@ class CommunityApplicationTests {
         Assertions.assertThat(result.getId()).isEqualTo(user.getId());
     }
 
-    @Value("${application-secret.client-id}")
-    private String clientId;
-
-    @Test
-    void ymlProperties() {
-        System.out.println(clientId);
-    }
 
 
 

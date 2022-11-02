@@ -42,4 +42,4 @@ logging:
     max-size: 10MB
   level:
     org.hibernate.sql: debug
-    org.hibernate.type: trace
+#    org.hibernate.type: trace
