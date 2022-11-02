@@ -18663,3 +18663,442 @@ select count(board0_.board_id) as col_0_0_ from board board0_;
 2022-11-02 18:51:17.785  INFO 5716 --- [http-nio-8080-exec-1] p6spy                                    : #1667382677785 | took 0ms | commit | connection 3| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
 
 ;
+2022-11-02 18:52:41.632  INFO 5716 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 18:52:41.632  INFO 5716 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-02 18:52:41.648  INFO 5716 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-02 18:57:28.335  INFO 6456 --- [restartedMain] c.e.comumnity.CommunityApplication       : Starting CommunityApplication using Java 11.0.16.1 on DESKTOP-5SH5M1R with PID 6456 (C:\Users\diffchild_chae\IdeaProjects\community-board\build\classes\java\main started by diffchild_chae in C:\Users\diffchild_chae\IdeaProjects\community-board)
+2022-11-02 18:57:28.335  INFO 6456 --- [restartedMain] c.e.comumnity.CommunityApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-11-02 18:57:28.366  INFO 6456 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-02 18:57:28.366  INFO 6456 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-02 18:57:28.970  INFO 6456 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-02 18:57:29.017  INFO 6456 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 6 JPA repository interfaces.
+2022-11-02 18:57:29.418  INFO 6456 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-11-02 18:57:29.418  INFO 6456 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-02 18:57:29.418  INFO 6456 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-11-02 18:57:29.465  INFO 6456 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-02 18:57:29.465  INFO 6456 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1099 ms
+2022-11-02 18:57:29.590  INFO 6456 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-02 18:57:29.621  INFO 6456 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-11-02 18:57:29.668  INFO 6456 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-02 18:57:29.710  INFO 6456 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-02 18:57:29.820  INFO 6456 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-02 18:57:29.835  INFO 6456 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-11-02 18:57:30.189  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050189 | took 8ms | statement | connection 1| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table comment 
+       drop 
+       foreign key FKlij9oor1nav89jeat35s6kbp1
+
+    alter table comment 
+       drop 
+       foreign key FKlij9oor1nav89jeat35s6kbp1;
+2022-11-02 18:57:30.189  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050189 | took 5ms | statement | connection 1| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table comment 
+       drop 
+       foreign key FKq7rr5epaoagevts8cop65o31h
+
+    alter table comment 
+       drop 
+       foreign key FKq7rr5epaoagevts8cop65o31h;
+2022-11-02 18:57:30.189  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050189 | took 4ms | statement | connection 1| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table comment 
+       drop 
+       foreign key FKde3rfu96lep00br5ov0mdieyt
+
+    alter table comment 
+       drop 
+       foreign key FKde3rfu96lep00br5ov0mdieyt;
+2022-11-02 18:57:30.205  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050205 | took 3ms | statement | connection 1| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table files 
+       drop 
+       foreign key FKmql4ppp70cnt839xngxie3v25
+
+    alter table files 
+       drop 
+       foreign key FKmql4ppp70cnt839xngxie3v25;
+2022-11-02 18:57:30.205  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050205 | took 3ms | statement | connection 1| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table member 
+       drop 
+       foreign key FKcjte2jn9pvo9ud2hyfgwcja0k
+
+    alter table member 
+       drop 
+       foreign key FKcjte2jn9pvo9ud2hyfgwcja0k;
+2022-11-02 18:57:30.205  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050205 | took 3ms | statement | connection 1| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table re_comment 
+       drop 
+       foreign key FKlbau13r2qs2dvla5g9k3xnmpd
+
+    alter table re_comment 
+       drop 
+       foreign key FKlbau13r2qs2dvla5g9k3xnmpd;
+2022-11-02 18:57:30.205  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050205 | took 3ms | statement | connection 1| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table user_authority 
+       drop 
+       foreign key user_id
+
+    alter table user_authority 
+       drop 
+       foreign key user_id;
+2022-11-02 18:57:30.205  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050205 | took 2ms | statement | connection 1| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists board
+
+    drop table if exists board;
+2022-11-02 18:57:30.220  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050220 | took 2ms | statement | connection 1| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists comment
+
+    drop table if exists comment;
+2022-11-02 18:57:30.220  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050220 | took 1ms | statement | connection 1| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists files
+
+    drop table if exists files;
+2022-11-02 18:57:30.220  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050220 | took 1ms | statement | connection 1| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists member
+
+    drop table if exists member;
+2022-11-02 18:57:30.220  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050220 | took 2ms | statement | connection 1| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists notice
+
+    drop table if exists notice;
+2022-11-02 18:57:30.220  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050220 | took 3ms | statement | connection 1| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists re_comment
+
+    drop table if exists re_comment;
+2022-11-02 18:57:30.236  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050236 | took 5ms | statement | connection 1| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists team
+
+    drop table if exists team;
+2022-11-02 18:57:30.236  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050236 | took 2ms | statement | connection 1| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists user
+
+    drop table if exists user;
+2022-11-02 18:57:30.236  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050236 | took 1ms | statement | connection 1| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    drop table if exists user_authority
+
+    drop table if exists user_authority;
+2022-11-02 18:57:30.236  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050236 | took 4ms | statement | connection 2| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table board (
+       board_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        contents longtext,
+        declaration bit not null,
+        gender integer,
+        like_count integer not null,
+        password varchar(255),
+        tag integer,
+        title varchar(255),
+        user_id varchar(255),
+        view_count integer not null,
+        primary key (board_id)
+    ) engine=InnoDB
+
+    create table board (
+       board_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        contents longtext,
+        declaration bit not null,
+        gender integer,
+        like_count integer not null,
+        password varchar(255),
+        tag integer,
+        title varchar(255),
+        user_id varchar(255),
+        view_count integer not null,
+        primary key (board_id)
+    ) engine=InnoDB;
+2022-11-02 18:57:30.251  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050251 | took 5ms | statement | connection 2| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table comment (
+       comment_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        contents varchar(255),
+        is_removed bit not null,
+        nick_name varchar(255),
+        password varchar(255),
+        board_id bigint,
+        notice_id bigint,
+        parent_id bigint,
+        primary key (comment_id)
+    ) engine=InnoDB
+
+    create table comment (
+       comment_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        contents varchar(255),
+        is_removed bit not null,
+        nick_name varchar(255),
+        password varchar(255),
+        board_id bigint,
+        notice_id bigint,
+        parent_id bigint,
+        primary key (comment_id)
+    ) engine=InnoDB;
+2022-11-02 18:57:30.251  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050251 | took 4ms | statement | connection 2| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table files (
+       files_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        file_path varchar(255),
+        file_size bigint,
+        original_file_name varchar(255),
+        board_id bigint,
+        primary key (files_id)
+    ) engine=InnoDB
+
+    create table files (
+       files_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        file_path varchar(255),
+        file_size bigint,
+        original_file_name varchar(255),
+        board_id bigint,
+        primary key (files_id)
+    ) engine=InnoDB;
+2022-11-02 18:57:30.251  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050251 | took 4ms | statement | connection 2| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table member (
+       member_id bigint not null auto_increment,
+        age integer not null,
+        user_name varchar(255),
+        team_id bigint,
+        primary key (member_id)
+    ) engine=InnoDB
+
+    create table member (
+       member_id bigint not null auto_increment,
+        age integer not null,
+        user_name varchar(255),
+        team_id bigint,
+        primary key (member_id)
+    ) engine=InnoDB;
+2022-11-02 18:57:30.251  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050251 | took 4ms | statement | connection 2| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table notice (
+       notice_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        contents varchar(255),
+        declaration bit not null,
+        like_count integer not null,
+        title varchar(255),
+        primary key (notice_id)
+    ) engine=InnoDB
+
+    create table notice (
+       notice_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        contents varchar(255),
+        declaration bit not null,
+        like_count integer not null,
+        title varchar(255),
+        primary key (notice_id)
+    ) engine=InnoDB;
+2022-11-02 18:57:30.267  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050267 | took 4ms | statement | connection 2| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table re_comment (
+       recomment_id bigint not null auto_increment,
+        contents varchar(255),
+        is_removed bit not null,
+        nick_name varchar(255),
+        password varchar(255),
+        comment_id bigint,
+        primary key (recomment_id)
+    ) engine=InnoDB
+
+    create table re_comment (
+       recomment_id bigint not null auto_increment,
+        contents varchar(255),
+        is_removed bit not null,
+        nick_name varchar(255),
+        password varchar(255),
+        comment_id bigint,
+        primary key (recomment_id)
+    ) engine=InnoDB;
+2022-11-02 18:57:30.267  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050267 | took 4ms | statement | connection 2| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table team (
+       team_id bigint not null auto_increment,
+        name varchar(255),
+        primary key (team_id)
+    ) engine=InnoDB
+
+    create table team (
+       team_id bigint not null auto_increment,
+        name varchar(255),
+        primary key (team_id)
+    ) engine=InnoDB;
+2022-11-02 18:57:30.267  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050267 | took 4ms | statement | connection 2| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table user (
+       user_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        account varchar(255),
+        birth varchar(255),
+        email varchar(255),
+        enabled bit not null,
+        gender varchar(255),
+        nick_name varchar(255),
+        password varchar(255),
+        role varchar(255),
+        user_name varchar(255),
+        primary key (user_id)
+    ) engine=InnoDB
+
+    create table user (
+       user_id bigint not null auto_increment,
+        created_at datetime(6),
+        updated_at datetime(6),
+        account varchar(255),
+        birth varchar(255),
+        email varchar(255),
+        enabled bit not null,
+        gender varchar(255),
+        nick_name varchar(255),
+        password varchar(255),
+        role varchar(255),
+        user_name varchar(255),
+        primary key (user_id)
+    ) engine=InnoDB;
+2022-11-02 18:57:30.283  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050283 | took 4ms | statement | connection 2| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    create table user_authority (
+       authority_id bigint not null,
+        authority varchar(255) not null,
+        user_id bigint,
+        primary key (authority_id, authority)
+    ) engine=InnoDB
+
+    create table user_authority (
+       authority_id bigint not null,
+        authority varchar(255) not null,
+        user_id bigint,
+        primary key (authority_id, authority)
+    ) engine=InnoDB;
+2022-11-02 18:57:30.283  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050283 | took 10ms | statement | connection 2| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table comment 
+       add constraint FKlij9oor1nav89jeat35s6kbp1 
+       foreign key (board_id) 
+       references board (board_id)
+
+    alter table comment 
+       add constraint FKlij9oor1nav89jeat35s6kbp1 
+       foreign key (board_id) 
+       references board (board_id);
+2022-11-02 18:57:30.298  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050298 | took 11ms | statement | connection 2| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table comment 
+       add constraint FKq7rr5epaoagevts8cop65o31h 
+       foreign key (notice_id) 
+       references notice (notice_id)
+
+    alter table comment 
+       add constraint FKq7rr5epaoagevts8cop65o31h 
+       foreign key (notice_id) 
+       references notice (notice_id);
+2022-11-02 18:57:30.314  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050314 | took 12ms | statement | connection 2| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table comment 
+       add constraint FKde3rfu96lep00br5ov0mdieyt 
+       foreign key (parent_id) 
+       references comment (comment_id)
+
+    alter table comment 
+       add constraint FKde3rfu96lep00br5ov0mdieyt 
+       foreign key (parent_id) 
+       references comment (comment_id);
+2022-11-02 18:57:30.314  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050314 | took 9ms | statement | connection 2| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table files 
+       add constraint FKmql4ppp70cnt839xngxie3v25 
+       foreign key (board_id) 
+       references board (board_id)
+
+    alter table files 
+       add constraint FKmql4ppp70cnt839xngxie3v25 
+       foreign key (board_id) 
+       references board (board_id);
+2022-11-02 18:57:30.330  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050330 | took 8ms | statement | connection 2| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table member 
+       add constraint FKcjte2jn9pvo9ud2hyfgwcja0k 
+       foreign key (team_id) 
+       references team (team_id)
+
+    alter table member 
+       add constraint FKcjte2jn9pvo9ud2hyfgwcja0k 
+       foreign key (team_id) 
+       references team (team_id);
+2022-11-02 18:57:30.345  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050345 | took 10ms | statement | connection 2| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table re_comment 
+       add constraint FKlbau13r2qs2dvla5g9k3xnmpd 
+       foreign key (comment_id) 
+       references comment (comment_id)
+
+    alter table re_comment 
+       add constraint FKlbau13r2qs2dvla5g9k3xnmpd 
+       foreign key (comment_id) 
+       references comment (comment_id);
+2022-11-02 18:57:30.345  INFO 6456 --- [restartedMain] p6spy                                    : #1667383050345 | took 8ms | statement | connection 2| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+    alter table user_authority 
+       add constraint user_id 
+       foreign key (user_id) 
+       references user (user_id)
+
+    alter table user_authority 
+       add constraint user_id 
+       foreign key (user_id) 
+       references user (user_id);
+2022-11-02 18:57:30.345  INFO 6456 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-02 18:57:30.361  INFO 6456 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 18:57:30.720  WARN 6456 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-02 18:57:30.923  INFO 6456 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3f815c1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@462937d5, org.springframework.security.web.context.SecurityContextPersistenceFilter@29548f0f, org.springframework.security.web.header.HeaderWriterFilter@79b9e96c, org.springframework.web.filter.CorsFilter@62cb8b03, org.springframework.security.web.authentication.logout.LogoutFilter@18d41748, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a2c59c0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56fdbe6e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2a6b50ec, org.springframework.security.web.session.SessionManagementFilter@92391ab, org.springframework.security.web.access.ExceptionTranslationFilter@28357fba, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e9c558e]
+2022-11-02 18:57:30.939  INFO 6456 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-11-02 18:57:31.064  INFO 6456 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-02 18:57:31.080  INFO 6456 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-11-02 18:57:31.220  INFO 6456 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-02 18:57:31.236  INFO 6456 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-11-02 18:57:31.236  INFO 6456 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-11-02 18:57:31.251  INFO 6456 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-11-02 18:57:31.345  INFO 6456 --- [restartedMain] c.e.comumnity.CommunityApplication       : Started CommunityApplication in 3.23 seconds (JVM running for 3.59)
+2022-11-02 18:57:43.184  INFO 6456 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-02 18:57:43.185  INFO 6456 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-02 18:57:43.186  INFO 6456 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-02 18:57:43.236  INFO 6456 --- [http-nio-8080-exec-1] p6spy                                    : #1667383063236 | took 7ms | statement | connection 3| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+select board0_.board_id as board_id1_0_, board0_.created_at as created_2_0_, board0_.updated_at as updated_3_0_, board0_.contents as contents4_0_, board0_.declaration as declarat5_0_, board0_.gender as gender6_0_, board0_.like_count as like_cou7_0_, board0_.password as password8_0_, board0_.tag as tag9_0_, board0_.title as title10_0_, board0_.user_id as user_id11_0_, board0_.view_count as view_co12_0_ from board board0_ order by board0_.board_id desc limit ?
+select board0_.board_id as board_id1_0_, board0_.created_at as created_2_0_, board0_.updated_at as updated_3_0_, board0_.contents as contents4_0_, board0_.declaration as declarat5_0_, board0_.gender as gender6_0_, board0_.like_count as like_cou7_0_, board0_.password as password8_0_, board0_.tag as tag9_0_, board0_.title as title10_0_, board0_.user_id as user_id11_0_, board0_.view_count as view_co12_0_ from board board0_ order by board0_.board_id desc limit 5;
+2022-11-02 18:57:43.251  INFO 6456 --- [http-nio-8080-exec-1] p6spy                                    : #1667383063251 | took 0ms | statement | connection 3| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+select count(board0_.board_id) as col_0_0_ from board board0_
+select count(board0_.board_id) as col_0_0_ from board board0_;
+2022-11-02 18:57:43.253  INFO 6456 --- [http-nio-8080-exec-1] p6spy                                    : #1667383063253 | took 0ms | commit | connection 3| url jdbc:mysql://localhost:3306/community_board?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+
+;
+2022-11-02 18:57:54.551  INFO 6456 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-02 18:57:54.551  INFO 6456 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-02 18:57:54.566  INFO 6456 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

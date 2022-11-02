@@ -87,7 +87,7 @@ public class BoardApiController {
 
     @GetMapping("/paging/test")
     public Page<BoardListDto> boardPagingTest(){
-        Pageable pageRequest = PageRequest.of(0,5);
+        Pageable pageRequest = PageRequest.of(0,5, Sort.by("id").descending());
         return boardService.pagingTest(pageRequest);
     }
 
