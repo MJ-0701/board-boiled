@@ -1,5 +1,6 @@
 package com.example.comumnity.domain.board.web.controller;
 
+import com.example.comumnity.domain.board.domain.Board;
 import com.example.comumnity.domain.board.domain.Tag;
 import com.example.comumnity.domain.board.service.BoardService;
 import com.example.comumnity.domain.board.web.dto.FileVo;
@@ -81,6 +82,11 @@ public class BoardApiController {
     @GetMapping("/search/like")
     public ResponseEntity<List<BoardListDto>> searchLikeList(@RequestParam String keyword){
         return ResponseEntity.ok(boardService.searchLikeBoard(keyword));
+    }
+
+    @GetMapping("/paging/test")
+    public ResponseEntity<List<Board>> boardPagingTest(Pageable pageable){
+        return ResponseEntity.ok(boardService.pagingTest(pageable).getContent());
     }
 
     @GetMapping("/paging")

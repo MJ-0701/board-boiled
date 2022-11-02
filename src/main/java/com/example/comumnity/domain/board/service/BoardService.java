@@ -124,6 +124,11 @@ public class BoardService {
         return boardRepository.findByTitleLike(keyword, pageable).map(BoardListDto::new);
     }
 
+    @Transactional(readOnly = true)
+    public Page<Board> pagingTest(Pageable pageable) {
+        return boardRepository.findAll(pageable);
+    }
+
 
 
     // U
