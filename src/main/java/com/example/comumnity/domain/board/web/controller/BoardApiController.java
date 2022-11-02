@@ -12,6 +12,7 @@ import com.example.comumnity.domain.board.web.dto.res.BoardResDto;
 import com.example.comumnity.global.annotation.Timer;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -85,8 +86,9 @@ public class BoardApiController {
     }
 
     @GetMapping("/paging/test")
-    public ResponseEntity<List<Board>> boardPagingTest(Pageable pageable){
-        return ResponseEntity.ok(boardService.pagingTest(pageable).getContent());
+    public Page<BoardListDto> boardPagingTest(){
+        Pageable pageRequest = PageRequest.of(0,5);
+        return boardService.pagingTest(pageRequest);
     }
 
     @GetMapping("/paging")

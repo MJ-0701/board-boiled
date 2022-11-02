@@ -15,6 +15,7 @@ import com.example.comumnity.domain.file.service.FileService;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -125,11 +126,9 @@ public class BoardService {
     }
 
     @Transactional(readOnly = true)
-    public Page<Board> pagingTest(Pageable pageable) {
-        return boardRepository.findAll(pageable);
+    public Page<BoardListDto> pagingTest(Pageable pageRequest) {
+        return boardRepository.findAll(pageRequest).map(BoardListDto::new);
     }
-
-
 
     // U
     @Transactional
