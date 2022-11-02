@@ -15,6 +15,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.repository.query.Param;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -86,8 +87,17 @@ public class BoardApiController {
     }
 
     @GetMapping("/paging/test")
-    public Page<BoardListDto> boardPagingTest(){
-        Pageable pageRequest = PageRequest.of(0,5, Sort.by("id").descending());
+    public Page<BoardListDto> boardPagingTest(
+            @RequestParam(required = false) Integer pageNum
+    ){
+        if(pageNum != null && pageNum > 1) {
+            pageNum = pageNum -1;
+        }else {
+            pageNum = 0;
+        }
+        System.out.println(pageNum);
+
+        Pageable pageRequest = PageRequest.of(pageNum,5, Sort.by("id").descending());
         return boardService.pagingTest(pageRequest);
     }
 
