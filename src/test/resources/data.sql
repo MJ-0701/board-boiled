@@ -7,8 +7,8 @@ BEGIN
     DECLARE i INT DEFAULT 1;
 
     WHILE i <= 500 DO
-            INSERT INTO community_board.board(title , contents, user_id , created_at, updated_at, like_count, view_count, gender)
-            VALUES(concat('제목',i), concat('내용',i), concat("유저id", i), now(), now(), 0, 0, 0);
+            INSERT INTO community_board.board(title , contents, user_id , created_at, updated_at, like_count, view_count, gender, declaration)
+            VALUES(concat('제목',i), concat('내용',i), concat("유저id", i), now(), now(), 0, 0, 0, false);
             SET i = i + 1;
         END WHILE;
 END$$

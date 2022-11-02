@@ -7,6 +7,7 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -42,6 +43,14 @@ class CommunityApplicationTests {
 
         Assertions.assertThat(result).isEqualTo(user);
         Assertions.assertThat(result.getId()).isEqualTo(user.getId());
+    }
+
+    @Value("${application-secret.client-id}")
+    private String clientId;
+
+    @Test
+    void ymlProperties() {
+        System.out.println(clientId);
     }
 
 
