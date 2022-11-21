@@ -6,10 +6,11 @@ import com.example.comumnity.domain.board.domain.Board;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 
 import java.util.List;
 
-public interface BoardRepository extends JpaRepository<Board, Long> {
+public interface BoardRepository extends JpaRepository<Board, Long>, BoardRepositoryCustom, QuerydslPredicateExecutor<Board> {
 
     Board findByIdAndPassword(Long id, String password);
 
@@ -40,9 +41,5 @@ public interface BoardRepository extends JpaRepository<Board, Long> {
 
     @Query("SELECT b FROM Board b WHERE b.tag IS NULL ")
     List<Board> findByTagIsNull(Tag tag);
-
-
-
-
 
 }
