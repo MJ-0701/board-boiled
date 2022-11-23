@@ -63,6 +63,12 @@ public class Board extends BaseTimeEntity {
         this.declaration = declaration;
     }
 
+    @Builder
+    public Board(String title, String userId) {
+        this.title = title;
+        this.userId = userId;
+    }
+
     public void addComment(Comment comment){
         commentList.add(comment);
     }
