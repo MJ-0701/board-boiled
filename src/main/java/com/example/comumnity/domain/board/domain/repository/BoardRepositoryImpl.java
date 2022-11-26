@@ -21,7 +21,6 @@ public class BoardRepositoryImpl extends QuerydslSupportCustom implements BoardR
 
     public BoardRepositoryImpl(EntityManager em) {
         super(Board.class);
-        JPAQueryFactory queryFactory = new JPAQueryFactory(em);
     }
 
 
@@ -31,7 +30,7 @@ public class BoardRepositoryImpl extends QuerydslSupportCustom implements BoardR
     @Override
     public List<BoardDto> search(BoardSearchCondition condition) {
 
-        return getQueryFactory().select(new QBoardDto(
+        return select(new QBoardDto(
                 board.title,
                 board.userId,
                 board.password,
