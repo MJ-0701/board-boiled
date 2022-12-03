@@ -23,10 +23,6 @@ public class BoardRepositoryImpl extends QuerydslSupportCustom implements BoardR
         super(Board.class);
     }
 
-
-
-
-
     @Override
     public List<BoardDto> search(BoardSearchCondition condition) {
 
